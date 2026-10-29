@@ -1,0 +1,21 @@
+﻿[build-system]
+requires = ["scikit-build-core>=0.10", "pybind11>=2.13"]
+build-backend = "scikit_build_core.build"
+
+[project]
+name = "plume-ui"
+version = "0.1.0"
+description = "Python bindings and lightweight API for the Plume UI engine"
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "Source-Available" }
+authors = [{ name = "x9860426" }]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Programming Language :: C++",
+    "Operating System :: OS Independent",
+]
+
+[tool.scikit-build]
+cmake.version = ">=3.20"
+wheel.packages = ["plume"]
