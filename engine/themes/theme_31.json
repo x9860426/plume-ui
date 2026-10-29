@@ -1,0 +1,337 @@
+{
+  "name": "使命",
+  "colors": {
+    "bg1": [
+      26,
+      31,
+      26
+    ],
+    "bg2": [
+      34,
+      40,
+      34
+    ],
+    "bg3": [
+      26,
+      26,
+      26
+    ],
+    "bg4": [
+      26,
+      26,
+      26
+    ],
+    "text": [
+      224,
+      224,
+      224
+    ],
+    "title": [
+      255,
+      102,
+      0
+    ],
+    "accent": [
+      255,
+      102,
+      0
+    ],
+    "accent2": [
+      255,
+      153,
+      51
+    ],
+    "btnBg1": [
+      74,
+      74,
+      74
+    ],
+    "btnBg2": [
+      51,
+      51,
+      51
+    ],
+    "btnHover1": [
+      102,
+      102,
+      102
+    ],
+    "btnHover2": [
+      85,
+      85,
+      85
+    ],
+    "btnPressed": [
+      42,
+      42,
+      42
+    ],
+    "btnText": [
+      255,
+      255,
+      255
+    ],
+    "btnBorder": [
+      255,
+      102,
+      0
+    ],
+    "btnHoverBorder": [
+      255,
+      153,
+      51
+    ],
+    "inputBg": [
+      30,
+      35,
+      30
+    ],
+    "inputBorder": [
+      255,
+      102,
+      0
+    ],
+    "inputText": [
+      224,
+      224,
+      224
+    ],
+    "toggleOffBg": [
+      42,
+      42,
+      42
+    ],
+    "toggleOnBg": [
+      51,
+      51,
+      51
+    ],
+    "toggleOffBorder": [
+      255,
+      102,
+      0
+    ],
+    "toggleOnBorder": [
+      255,
+      153,
+      51
+    ],
+    "toggleOffSlider": [
+      224,
+      224,
+      224
+    ],
+    "toggleOnSlider": [
+      255,
+      102,
+      0
+    ],
+    "sliderGroove": [
+      42,
+      42,
+      42
+    ],
+    "sliderHandle": [
+      255,
+      102,
+      0
+    ],
+    "sliderHandleBorder": [
+      255,
+      153,
+      51
+    ],
+    "checkBorder": [
+      255,
+      102,
+      0
+    ],
+    "checkBg": [
+      30,
+      35,
+      30
+    ],
+    "checkCheckedBg": [
+      255,
+      102,
+      0
+    ],
+    "checkCheckedBorder": [
+      255,
+      153,
+      51
+    ],
+    "tabBg": [
+      34,
+      40,
+      34
+    ],
+    "tabSelBg": [
+      51,
+      51,
+      51
+    ],
+    "tabText": [
+      224,
+      224,
+      224
+    ],
+    "tabSelText": [
+      255,
+      102,
+      0
+    ],
+    "menuBg": [
+      26,
+      31,
+      26
+    ],
+    "menuText": [
+      224,
+      224,
+      224
+    ],
+    "menuSelBg": [
+      51,
+      51,
+      51
+    ],
+    "menuSelText": [
+      255,
+      102,
+      0
+    ],
+    "toolbarBg": [
+      34,
+      40,
+      34
+    ],
+    "toolbarHoverBg": [
+      51,
+      51,
+      51
+    ],
+    "statusBg": [
+      26,
+      31,
+      26
+    ],
+    "statusText": [
+      255,
+      102,
+      0
+    ],
+    "groupBorder": [
+      255,
+      102,
+      0
+    ],
+    "groupTitleBg": [
+      30,
+      35,
+      30
+    ],
+    "groupTitle": [
+      255,
+      102,
+      0
+    ],
+    "cardBg1": [
+      74,
+      74,
+      74
+    ],
+    "cardBg2": [
+      51,
+      51,
+      51
+    ],
+    "cardHoverBg1": [
+      102,
+      102,
+      102
+    ],
+    "cardHoverBg2": [
+      85,
+      85,
+      85
+    ],
+    "listBg": [
+      30,
+      35,
+      30
+    ],
+    "listBorder": [
+      255,
+      102,
+      0
+    ],
+    "listText": [
+      224,
+      224,
+      224
+    ],
+    "listSelBg": [
+      51,
+      51,
+      51
+    ],
+    "useGradient": true,
+    "antialias": true,
+    "btnRadius": 8,
+    "inputRadius": 6,
+    "toggleW": 60,
+    "toggleH": 30,
+    "toggleRadius": 10,
+    "toggleStyle": 1,
+    "checkRadius": 3,
+    "tabRadius": 8,
+    "groupRadius": 8,
+    "cardRadius": 8
+  },
+  "texts": {
+    "windowTitle": "使命",
+    "titleText": "使命 UI 模板",
+    "statusMsg": "任务执行中...",
+    "demoGroupTitle": "交互控件演示",
+    "hSliderLabel": "水平滑动条：",
+    "vSliderLabel": "垂直滑动条：",
+    "toggleLabel": "自定义开关：",
+    "check1Text": "选项 1",
+    "check2Text": "选项 2",
+    "comboLabel": "下拉选择：",
+    "tab1Title": "概览",
+    "tab2Title": "列表",
+    "tab1Content": "坚定的使命风格，专注而果断",
+    "refreshBtnText": "刷新样式",
+    "fontName": "Segoe UI",
+    "loginTitle": "登录",
+    "loginIcon": "[USER]",
+    "settingsTitle": "设置",
+    "aboutTitle": "关于",
+    "cardTexts": [
+      "登录窗口",
+      "设置窗口",
+      "关于窗口",
+      "消息盒子"
+    ],
+    "comboItems": [
+      "选项 A",
+      "选项 B",
+      "选项 C",
+      "选项 D"
+    ],
+    "listItems": [
+      "项目 1",
+      "项目 2",
+      "项目 3",
+      "项目 4"
+    ],
+    "menuLabels": [
+      "文件",
+      "视图",
+      "帮助"
+    ]
+  },
+  "bgType": 31
+}

@@ -1,0 +1,337 @@
+{
+  "name": "国风",
+  "colors": {
+    "bg1": [
+      250,
+      240,
+      230
+    ],
+    "bg2": [
+      250,
+      240,
+      230
+    ],
+    "bg3": [
+      250,
+      240,
+      230
+    ],
+    "bg4": [
+      250,
+      240,
+      230
+    ],
+    "text": [
+      62,
+      39,
+      35
+    ],
+    "title": [
+      192,
+      64,
+      64
+    ],
+    "accent": [
+      192,
+      160,
+      96
+    ],
+    "accent2": [
+      192,
+      64,
+      64
+    ],
+    "btnBg1": [
+      212,
+      163,
+      115
+    ],
+    "btnBg2": [
+      184,
+      134,
+      11
+    ],
+    "btnHover1": [
+      224,
+      184,
+      134
+    ],
+    "btnHover2": [
+      201,
+      160,
+      64
+    ],
+    "btnPressed": [
+      192,
+      160,
+      96
+    ],
+    "btnText": [
+      44,
+      26,
+      15
+    ],
+    "btnBorder": [
+      139,
+      101,
+      8
+    ],
+    "btnHoverBorder": [
+      107,
+      76,
+      10
+    ],
+    "inputBg": [
+      255,
+      255,
+      255
+    ],
+    "inputBorder": [
+      192,
+      160,
+      96
+    ],
+    "inputText": [
+      62,
+      39,
+      35
+    ],
+    "toggleOffBg": [
+      212,
+      195,
+      163
+    ],
+    "toggleOnBg": [
+      178,
+      34,
+      34
+    ],
+    "toggleOffBorder": [
+      139,
+      101,
+      8
+    ],
+    "toggleOnBorder": [
+      139,
+      0,
+      0
+    ],
+    "toggleOffSlider": [
+      62,
+      39,
+      35
+    ],
+    "toggleOnSlider": [
+      255,
+      255,
+      255
+    ],
+    "sliderGroove": [
+      212,
+      195,
+      163
+    ],
+    "sliderHandle": [
+      192,
+      160,
+      96
+    ],
+    "sliderHandleBorder": [
+      139,
+      101,
+      8
+    ],
+    "checkBorder": [
+      192,
+      160,
+      96
+    ],
+    "checkBg": [
+      255,
+      255,
+      255
+    ],
+    "checkCheckedBg": [
+      192,
+      64,
+      64
+    ],
+    "checkCheckedBorder": [
+      139,
+      0,
+      0
+    ],
+    "tabBg": [
+      250,
+      240,
+      230
+    ],
+    "tabSelBg": [
+      192,
+      160,
+      96
+    ],
+    "tabText": [
+      62,
+      39,
+      35
+    ],
+    "tabSelText": [
+      44,
+      26,
+      15
+    ],
+    "menuBg": [
+      250,
+      240,
+      230
+    ],
+    "menuText": [
+      62,
+      39,
+      35
+    ],
+    "menuSelBg": [
+      192,
+      160,
+      96
+    ],
+    "menuSelText": [
+      62,
+      39,
+      35
+    ],
+    "toolbarBg": [
+      250,
+      240,
+      230
+    ],
+    "toolbarHoverBg": [
+      212,
+      163,
+      115
+    ],
+    "statusBg": [
+      250,
+      240,
+      230
+    ],
+    "statusText": [
+      92,
+      58,
+      33
+    ],
+    "groupBorder": [
+      192,
+      160,
+      96
+    ],
+    "groupTitleBg": [
+      255,
+      250,
+      240
+    ],
+    "groupTitle": [
+      62,
+      39,
+      35
+    ],
+    "cardBg1": [
+      212,
+      163,
+      115
+    ],
+    "cardBg2": [
+      184,
+      134,
+      11
+    ],
+    "cardHoverBg1": [
+      224,
+      184,
+      134
+    ],
+    "cardHoverBg2": [
+      201,
+      160,
+      64
+    ],
+    "listBg": [
+      255,
+      250,
+      240
+    ],
+    "listBorder": [
+      192,
+      160,
+      96
+    ],
+    "listText": [
+      62,
+      39,
+      35
+    ],
+    "listSelBg": [
+      192,
+      64,
+      64
+    ],
+    "useGradient": false,
+    "antialias": true,
+    "btnRadius": 6,
+    "inputRadius": 4,
+    "toggleW": 52,
+    "toggleH": 30,
+    "toggleRadius": 14,
+    "toggleStyle": 0,
+    "checkRadius": 4,
+    "tabRadius": 4,
+    "groupRadius": 6,
+    "cardRadius": 6
+  },
+  "texts": {
+    "windowTitle": "国风",
+    "titleText": "国风 UI 模板",
+    "statusMsg": "古韵悠然",
+    "demoGroupTitle": "交互控件演示",
+    "hSliderLabel": "水平滑动条：",
+    "vSliderLabel": "垂直滑动条：",
+    "toggleLabel": "自定义开关：",
+    "check1Text": "选项 1",
+    "check2Text": "选项 2",
+    "comboLabel": "下拉选择：",
+    "tab1Title": "概览",
+    "tab2Title": "列表",
+    "tab1Content": "传统中式美学，典雅端庄",
+    "refreshBtnText": "刷新样式",
+    "fontName": "KaiTi",
+    "loginTitle": "登录",
+    "loginIcon": "[USER]",
+    "settingsTitle": "设置",
+    "aboutTitle": "关于",
+    "cardTexts": [
+      "登录窗口",
+      "设置窗口",
+      "关于窗口",
+      "消息盒子"
+    ],
+    "comboItems": [
+      "选项 A",
+      "选项 B",
+      "选项 C",
+      "选项 D"
+    ],
+    "listItems": [
+      "项目 1",
+      "项目 2",
+      "项目 3",
+      "项目 4"
+    ],
+    "menuLabels": [
+      "文件",
+      "视图",
+      "帮助"
+    ]
+  },
+  "bgType": 11
+}

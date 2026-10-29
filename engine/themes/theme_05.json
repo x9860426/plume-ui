@@ -1,0 +1,337 @@
+{
+  "name": "像素街机",
+  "colors": {
+    "bg1": [
+      26,
+      0,
+      51
+    ],
+    "bg2": [
+      51,
+      0,
+      102
+    ],
+    "bg3": [
+      26,
+      0,
+      51
+    ],
+    "bg4": [
+      26,
+      0,
+      51
+    ],
+    "text": [
+      255,
+      255,
+      0
+    ],
+    "title": [
+      255,
+      0,
+      255
+    ],
+    "accent": [
+      255,
+      0,
+      255
+    ],
+    "accent2": [
+      0,
+      255,
+      255
+    ],
+    "btnBg1": [
+      255,
+      0,
+      255
+    ],
+    "btnBg2": [
+      153,
+      0,
+      204
+    ],
+    "btnHover1": [
+      255,
+      102,
+      255
+    ],
+    "btnHover2": [
+      204,
+      0,
+      255
+    ],
+    "btnPressed": [
+      102,
+      0,
+      153
+    ],
+    "btnText": [
+      255,
+      255,
+      255
+    ],
+    "btnBorder": [
+      0,
+      255,
+      255
+    ],
+    "btnHoverBorder": [
+      255,
+      255,
+      0
+    ],
+    "inputBg": [
+      10,
+      0,
+      30
+    ],
+    "inputBorder": [
+      0,
+      255,
+      255
+    ],
+    "inputText": [
+      255,
+      255,
+      0
+    ],
+    "toggleOffBg": [
+      51,
+      0,
+      102
+    ],
+    "toggleOnBg": [
+      255,
+      0,
+      255
+    ],
+    "toggleOffBorder": [
+      0,
+      255,
+      255
+    ],
+    "toggleOnBorder": [
+      255,
+      255,
+      0
+    ],
+    "toggleOffSlider": [
+      0,
+      255,
+      255
+    ],
+    "toggleOnSlider": [
+      0,
+      255,
+      255
+    ],
+    "sliderGroove": [
+      51,
+      0,
+      102
+    ],
+    "sliderHandle": [
+      255,
+      0,
+      255
+    ],
+    "sliderHandleBorder": [
+      0,
+      255,
+      255
+    ],
+    "checkBorder": [
+      0,
+      255,
+      255
+    ],
+    "checkBg": [
+      10,
+      0,
+      30
+    ],
+    "checkCheckedBg": [
+      255,
+      0,
+      255
+    ],
+    "checkCheckedBorder": [
+      255,
+      255,
+      0
+    ],
+    "tabBg": [
+      51,
+      0,
+      102
+    ],
+    "tabSelBg": [
+      255,
+      0,
+      255
+    ],
+    "tabText": [
+      255,
+      255,
+      0
+    ],
+    "tabSelText": [
+      26,
+      0,
+      51
+    ],
+    "menuBg": [
+      26,
+      0,
+      51
+    ],
+    "menuText": [
+      255,
+      255,
+      0
+    ],
+    "menuSelBg": [
+      255,
+      0,
+      255
+    ],
+    "menuSelText": [
+      26,
+      0,
+      51
+    ],
+    "toolbarBg": [
+      34,
+      0,
+      68
+    ],
+    "toolbarHoverBg": [
+      255,
+      0,
+      255
+    ],
+    "statusBg": [
+      13,
+      0,
+      26
+    ],
+    "statusText": [
+      0,
+      255,
+      255
+    ],
+    "groupBorder": [
+      0,
+      255,
+      255
+    ],
+    "groupTitleBg": [
+      26,
+      0,
+      51
+    ],
+    "groupTitle": [
+      255,
+      0,
+      255
+    ],
+    "cardBg1": [
+      255,
+      0,
+      255
+    ],
+    "cardBg2": [
+      153,
+      0,
+      204
+    ],
+    "cardHoverBg1": [
+      255,
+      102,
+      255
+    ],
+    "cardHoverBg2": [
+      204,
+      0,
+      255
+    ],
+    "listBg": [
+      10,
+      0,
+      30
+    ],
+    "listBorder": [
+      0,
+      255,
+      255
+    ],
+    "listText": [
+      255,
+      255,
+      0
+    ],
+    "listSelBg": [
+      255,
+      0,
+      255
+    ],
+    "useGradient": true,
+    "antialias": false,
+    "btnRadius": 8,
+    "inputRadius": 4,
+    "toggleW": 60,
+    "toggleH": 30,
+    "toggleRadius": 4,
+    "toggleStyle": 1,
+    "checkRadius": 3,
+    "tabRadius": 4,
+    "groupRadius": 6,
+    "cardRadius": 6
+  },
+  "texts": {
+    "windowTitle": "像素街机 电玩主题",
+    "titleText": "电玩主题 UI 模板",
+    "statusMsg": "硬币已投 按开始键 高分榜: 9999900",
+    "demoGroupTitle": "街机控制面板",
+    "hSliderLabel": "游戏速度 (水平)：",
+    "vSliderLabel": "难度等级 (垂直)：",
+    "toggleLabel": "摇杆模式：",
+    "check1Text": "自动连射",
+    "check2Text": "显示hitbox",
+    "comboLabel": "选择角色：",
+    "tab1Title": "开始",
+    "tab2Title": "菜单",
+    "tab1Content": "插入硬币，开始游戏！所有控件采用复古街机主题。",
+    "refreshBtnText": "刷新样式",
+    "fontName": "Courier New",
+    "loginTitle": "玩家登陆",
+    "loginIcon": "[INSERT COIN]",
+    "settingsTitle": "游戏设置",
+    "aboutTitle": "关于",
+    "cardTexts": [
+      "登录窗口",
+      "设置窗口",
+      "关于窗口",
+      "消息盒子"
+    ],
+    "comboItems": [
+      "像素战士",
+      "霓虹法师",
+      "故障忍者",
+      "8-bit射手"
+    ],
+    "listItems": [
+      "高分记录",
+      "成就系统",
+      "关卡选择",
+      "设定资料"
+    ],
+    "menuLabels": [
+      "文件",
+      "视图",
+      "帮助"
+    ]
+  },
+  "bgType": 5
+}

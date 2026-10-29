@@ -1,0 +1,337 @@
+{
+  "name": "木头",
+  "colors": {
+    "bg1": [
+      212,
+      184,
+      150
+    ],
+    "bg2": [
+      230,
+      213,
+      195
+    ],
+    "bg3": [
+      212,
+      184,
+      150
+    ],
+    "bg4": [
+      212,
+      184,
+      150
+    ],
+    "text": [
+      74,
+      55,
+      36
+    ],
+    "title": [
+      139,
+      90,
+      43
+    ],
+    "accent": [
+      139,
+      90,
+      43
+    ],
+    "accent2": [
+      166,
+      124,
+      82
+    ],
+    "btnBg1": [
+      166,
+      124,
+      82
+    ],
+    "btnBg2": [
+      123,
+      78,
+      42
+    ],
+    "btnHover1": [
+      196,
+      154,
+      108
+    ],
+    "btnHover2": [
+      139,
+      90,
+      43
+    ],
+    "btnPressed": [
+      92,
+      58,
+      30
+    ],
+    "btnText": [
+      255,
+      255,
+      255
+    ],
+    "btnBorder": [
+      139,
+      90,
+      43
+    ],
+    "btnHoverBorder": [
+      74,
+      55,
+      36
+    ],
+    "inputBg": [
+      255,
+      250,
+      240
+    ],
+    "inputBorder": [
+      139,
+      90,
+      43
+    ],
+    "inputText": [
+      74,
+      55,
+      36
+    ],
+    "toggleOffBg": [
+      201,
+      173,
+      138
+    ],
+    "toggleOnBg": [
+      123,
+      78,
+      42
+    ],
+    "toggleOffBorder": [
+      139,
+      90,
+      43
+    ],
+    "toggleOnBorder": [
+      74,
+      55,
+      36
+    ],
+    "toggleOffSlider": [
+      255,
+      250,
+      240
+    ],
+    "toggleOnSlider": [
+      255,
+      250,
+      240
+    ],
+    "sliderGroove": [
+      201,
+      173,
+      138
+    ],
+    "sliderHandle": [
+      139,
+      90,
+      43
+    ],
+    "sliderHandleBorder": [
+      166,
+      124,
+      82
+    ],
+    "checkBorder": [
+      139,
+      90,
+      43
+    ],
+    "checkBg": [
+      255,
+      250,
+      240
+    ],
+    "checkCheckedBg": [
+      166,
+      124,
+      82
+    ],
+    "checkCheckedBorder": [
+      123,
+      78,
+      42
+    ],
+    "tabBg": [
+      230,
+      213,
+      195
+    ],
+    "tabSelBg": [
+      166,
+      124,
+      82
+    ],
+    "tabText": [
+      74,
+      55,
+      36
+    ],
+    "tabSelText": [
+      255,
+      255,
+      255
+    ],
+    "menuBg": [
+      212,
+      184,
+      150
+    ],
+    "menuText": [
+      74,
+      55,
+      36
+    ],
+    "menuSelBg": [
+      166,
+      124,
+      82
+    ],
+    "menuSelText": [
+      255,
+      255,
+      255
+    ],
+    "toolbarBg": [
+      230,
+      213,
+      195
+    ],
+    "toolbarHoverBg": [
+      196,
+      154,
+      108
+    ],
+    "statusBg": [
+      212,
+      184,
+      150
+    ],
+    "statusText": [
+      74,
+      55,
+      36
+    ],
+    "groupBorder": [
+      139,
+      90,
+      43
+    ],
+    "groupTitleBg": [
+      255,
+      250,
+      240
+    ],
+    "groupTitle": [
+      74,
+      55,
+      36
+    ],
+    "cardBg1": [
+      166,
+      124,
+      82
+    ],
+    "cardBg2": [
+      123,
+      78,
+      42
+    ],
+    "cardHoverBg1": [
+      196,
+      154,
+      108
+    ],
+    "cardHoverBg2": [
+      139,
+      90,
+      43
+    ],
+    "listBg": [
+      255,
+      250,
+      240
+    ],
+    "listBorder": [
+      139,
+      90,
+      43
+    ],
+    "listText": [
+      74,
+      55,
+      36
+    ],
+    "listSelBg": [
+      166,
+      124,
+      82
+    ],
+    "useGradient": true,
+    "antialias": true,
+    "btnRadius": 12,
+    "inputRadius": 10,
+    "toggleW": 56,
+    "toggleH": 30,
+    "toggleRadius": 14,
+    "toggleStyle": 0,
+    "checkRadius": 4,
+    "tabRadius": 12,
+    "groupRadius": 12,
+    "cardRadius": 12
+  },
+  "texts": {
+    "windowTitle": "木头",
+    "titleText": "木头 UI 模板",
+    "statusMsg": "自然质感",
+    "demoGroupTitle": "交互控件演示",
+    "hSliderLabel": "水平滑动条：",
+    "vSliderLabel": "垂直滑动条：",
+    "toggleLabel": "自定义开关：",
+    "check1Text": "选项 1",
+    "check2Text": "选项 2",
+    "comboLabel": "下拉选择：",
+    "tab1Title": "概览",
+    "tab2Title": "列表",
+    "tab1Content": "木质纹理，温暖质朴",
+    "refreshBtnText": "刷新样式",
+    "fontName": "Segoe UI",
+    "loginTitle": "登录",
+    "loginIcon": "[USER]",
+    "settingsTitle": "设置",
+    "aboutTitle": "关于",
+    "cardTexts": [
+      "登录窗口",
+      "设置窗口",
+      "关于窗口",
+      "消息盒子"
+    ],
+    "comboItems": [
+      "选项 A",
+      "选项 B",
+      "选项 C",
+      "选项 D"
+    ],
+    "listItems": [
+      "项目 1",
+      "项目 2",
+      "项目 3",
+      "项目 4"
+    ],
+    "menuLabels": [
+      "文件",
+      "视图",
+      "帮助"
+    ]
+  },
+  "bgType": 22
+}

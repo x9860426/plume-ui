@@ -1,0 +1,337 @@
+{
+  "name": "星空",
+  "colors": {
+    "bg1": [
+      6,
+      6,
+      26
+    ],
+    "bg2": [
+      13,
+      27,
+      62
+    ],
+    "bg3": [
+      26,
+      26,
+      74
+    ],
+    "bg4": [
+      10,
+      10,
+      40
+    ],
+    "text": [
+      208,
+      216,
+      240
+    ],
+    "title": [
+      90,
+      106,
+      154
+    ],
+    "accent": [
+      90,
+      106,
+      154
+    ],
+    "accent2": [
+      160,
+      184,
+      255
+    ],
+    "btnBg1": [
+      42,
+      58,
+      106
+    ],
+    "btnBg2": [
+      26,
+      40,
+      74
+    ],
+    "btnHover1": [
+      58,
+      74,
+      122
+    ],
+    "btnHover2": [
+      42,
+      56,
+      96
+    ],
+    "btnPressed": [
+      26,
+      40,
+      74
+    ],
+    "btnText": [
+      224,
+      232,
+      255
+    ],
+    "btnBorder": [
+      90,
+      106,
+      154
+    ],
+    "btnHoverBorder": [
+      160,
+      184,
+      255
+    ],
+    "inputBg": [
+      15,
+      20,
+      45
+    ],
+    "inputBorder": [
+      90,
+      106,
+      154
+    ],
+    "inputText": [
+      224,
+      232,
+      255
+    ],
+    "toggleOffBg": [
+      26,
+      40,
+      64
+    ],
+    "toggleOnBg": [
+      74,
+      96,
+      144
+    ],
+    "toggleOffBorder": [
+      90,
+      106,
+      154
+    ],
+    "toggleOnBorder": [
+      160,
+      184,
+      255
+    ],
+    "toggleOffSlider": [
+      208,
+      216,
+      240
+    ],
+    "toggleOnSlider": [
+      160,
+      184,
+      255
+    ],
+    "sliderGroove": [
+      26,
+      40,
+      64
+    ],
+    "sliderHandle": [
+      90,
+      106,
+      154
+    ],
+    "sliderHandleBorder": [
+      160,
+      184,
+      255
+    ],
+    "checkBorder": [
+      90,
+      106,
+      154
+    ],
+    "checkBg": [
+      15,
+      20,
+      45
+    ],
+    "checkCheckedBg": [
+      74,
+      96,
+      144
+    ],
+    "checkCheckedBorder": [
+      160,
+      184,
+      255
+    ],
+    "tabBg": [
+      26,
+      40,
+      74
+    ],
+    "tabSelBg": [
+      42,
+      58,
+      106
+    ],
+    "tabText": [
+      208,
+      216,
+      240
+    ],
+    "tabSelText": [
+      224,
+      232,
+      255
+    ],
+    "menuBg": [
+      6,
+      6,
+      26
+    ],
+    "menuText": [
+      208,
+      216,
+      240
+    ],
+    "menuSelBg": [
+      42,
+      58,
+      106
+    ],
+    "menuSelText": [
+      224,
+      232,
+      255
+    ],
+    "toolbarBg": [
+      13,
+      27,
+      62
+    ],
+    "toolbarHoverBg": [
+      42,
+      58,
+      106
+    ],
+    "statusBg": [
+      6,
+      6,
+      26
+    ],
+    "statusText": [
+      160,
+      184,
+      255
+    ],
+    "groupBorder": [
+      90,
+      106,
+      154
+    ],
+    "groupTitleBg": [
+      15,
+      20,
+      45
+    ],
+    "groupTitle": [
+      160,
+      184,
+      255
+    ],
+    "cardBg1": [
+      42,
+      58,
+      106
+    ],
+    "cardBg2": [
+      26,
+      40,
+      74
+    ],
+    "cardHoverBg1": [
+      58,
+      74,
+      122
+    ],
+    "cardHoverBg2": [
+      42,
+      56,
+      96
+    ],
+    "listBg": [
+      15,
+      20,
+      45
+    ],
+    "listBorder": [
+      90,
+      106,
+      154
+    ],
+    "listText": [
+      224,
+      232,
+      255
+    ],
+    "listSelBg": [
+      74,
+      96,
+      144
+    ],
+    "useGradient": true,
+    "antialias": true,
+    "btnRadius": 12,
+    "inputRadius": 10,
+    "toggleW": 60,
+    "toggleH": 30,
+    "toggleRadius": 14,
+    "toggleStyle": 0,
+    "checkRadius": 4,
+    "tabRadius": 12,
+    "groupRadius": 12,
+    "cardRadius": 12
+  },
+  "texts": {
+    "windowTitle": "星空",
+    "titleText": "星空 UI 模板",
+    "statusMsg": "探索宇宙奥秘",
+    "demoGroupTitle": "交互控件演示",
+    "hSliderLabel": "水平滑动条：",
+    "vSliderLabel": "垂直滑动条：",
+    "toggleLabel": "自定义开关：",
+    "check1Text": "选项 1",
+    "check2Text": "选项 2",
+    "comboLabel": "下拉选择：",
+    "tab1Title": "概览",
+    "tab2Title": "列表",
+    "tab1Content": "浩瀚星空，璀璨夺目",
+    "refreshBtnText": "刷新样式",
+    "fontName": "Segoe UI",
+    "loginTitle": "登录",
+    "loginIcon": "[USER]",
+    "settingsTitle": "设置",
+    "aboutTitle": "关于",
+    "cardTexts": [
+      "登录窗口",
+      "设置窗口",
+      "关于窗口",
+      "消息盒子"
+    ],
+    "comboItems": [
+      "选项 A",
+      "选项 B",
+      "选项 C",
+      "选项 D"
+    ],
+    "listItems": [
+      "项目 1",
+      "项目 2",
+      "项目 3",
+      "项目 4"
+    ],
+    "menuLabels": [
+      "文件",
+      "视图",
+      "帮助"
+    ]
+  },
+  "bgType": 18
+}

@@ -1,0 +1,337 @@
+{
+  "name": "冬天",
+  "colors": {
+    "bg1": [
+      27,
+      42,
+      58
+    ],
+    "bg2": [
+      44,
+      76,
+      110
+    ],
+    "bg3": [
+      200,
+      220,
+      232
+    ],
+    "bg4": [
+      200,
+      220,
+      232
+    ],
+    "text": [
+      27,
+      42,
+      58
+    ],
+    "title": [
+      138,
+      180,
+      214
+    ],
+    "accent": [
+      138,
+      180,
+      214
+    ],
+    "accent2": [
+      162,
+      200,
+      232
+    ],
+    "btnBg1": [
+      176,
+      212,
+      241
+    ],
+    "btnBg2": [
+      106,
+      156,
+      196
+    ],
+    "btnHover1": [
+      200,
+      226,
+      248
+    ],
+    "btnHover2": [
+      176,
+      212,
+      241
+    ],
+    "btnPressed": [
+      64,
+      112,
+      144
+    ],
+    "btnText": [
+      255,
+      255,
+      255
+    ],
+    "btnBorder": [
+      138,
+      180,
+      214
+    ],
+    "btnHoverBorder": [
+      162,
+      200,
+      232
+    ],
+    "inputBg": [
+      240,
+      248,
+      255
+    ],
+    "inputBorder": [
+      138,
+      180,
+      214
+    ],
+    "inputText": [
+      27,
+      42,
+      58
+    ],
+    "toggleOffBg": [
+      232,
+      240,
+      246
+    ],
+    "toggleOnBg": [
+      162,
+      200,
+      232
+    ],
+    "toggleOffBorder": [
+      138,
+      180,
+      214
+    ],
+    "toggleOnBorder": [
+      106,
+      156,
+      196
+    ],
+    "toggleOffSlider": [
+      255,
+      255,
+      255
+    ],
+    "toggleOnSlider": [
+      255,
+      255,
+      255
+    ],
+    "sliderGroove": [
+      232,
+      240,
+      246
+    ],
+    "sliderHandle": [
+      138,
+      180,
+      214
+    ],
+    "sliderHandleBorder": [
+      162,
+      200,
+      232
+    ],
+    "checkBorder": [
+      138,
+      180,
+      214
+    ],
+    "checkBg": [
+      240,
+      248,
+      255
+    ],
+    "checkCheckedBg": [
+      162,
+      200,
+      232
+    ],
+    "checkCheckedBorder": [
+      106,
+      156,
+      196
+    ],
+    "tabBg": [
+      200,
+      220,
+      232
+    ],
+    "tabSelBg": [
+      176,
+      212,
+      241
+    ],
+    "tabText": [
+      27,
+      42,
+      58
+    ],
+    "tabSelText": [
+      255,
+      255,
+      255
+    ],
+    "menuBg": [
+      200,
+      220,
+      232
+    ],
+    "menuText": [
+      27,
+      42,
+      58
+    ],
+    "menuSelBg": [
+      176,
+      212,
+      241
+    ],
+    "menuSelText": [
+      255,
+      255,
+      255
+    ],
+    "toolbarBg": [
+      200,
+      220,
+      232
+    ],
+    "toolbarHoverBg": [
+      176,
+      212,
+      241
+    ],
+    "statusBg": [
+      27,
+      42,
+      58
+    ],
+    "statusText": [
+      192,
+      216,
+      240
+    ],
+    "groupBorder": [
+      138,
+      180,
+      214
+    ],
+    "groupTitleBg": [
+      240,
+      248,
+      255
+    ],
+    "groupTitle": [
+      27,
+      42,
+      58
+    ],
+    "cardBg1": [
+      176,
+      212,
+      241
+    ],
+    "cardBg2": [
+      106,
+      156,
+      196
+    ],
+    "cardHoverBg1": [
+      200,
+      226,
+      248
+    ],
+    "cardHoverBg2": [
+      176,
+      212,
+      241
+    ],
+    "listBg": [
+      240,
+      248,
+      255
+    ],
+    "listBorder": [
+      138,
+      180,
+      214
+    ],
+    "listText": [
+      27,
+      42,
+      58
+    ],
+    "listSelBg": [
+      162,
+      200,
+      232
+    ],
+    "useGradient": true,
+    "antialias": true,
+    "btnRadius": 14,
+    "inputRadius": 12,
+    "toggleW": 56,
+    "toggleH": 30,
+    "toggleRadius": 14,
+    "toggleStyle": 3,
+    "checkRadius": 6,
+    "tabRadius": 14,
+    "groupRadius": 14,
+    "cardRadius": 14
+  },
+  "texts": {
+    "windowTitle": "冬天",
+    "titleText": "冬天 UI 模板",
+    "statusMsg": "雪花飘落...",
+    "demoGroupTitle": "交互控件演示",
+    "hSliderLabel": "水平滑动条：",
+    "vSliderLabel": "垂直滑动条：",
+    "toggleLabel": "自定义开关：",
+    "check1Text": "选项 1",
+    "check2Text": "选项 2",
+    "comboLabel": "下拉选择：",
+    "tab1Title": "概览",
+    "tab2Title": "列表",
+    "tab1Content": "清冷的冬日界面，纯净而宁静",
+    "refreshBtnText": "刷新样式",
+    "fontName": "Segoe UI",
+    "loginTitle": "登录",
+    "loginIcon": "[USER]",
+    "settingsTitle": "设置",
+    "aboutTitle": "关于",
+    "cardTexts": [
+      "登录窗口",
+      "设置窗口",
+      "关于窗口",
+      "消息盒子"
+    ],
+    "comboItems": [
+      "选项 A",
+      "选项 B",
+      "选项 C",
+      "选项 D"
+    ],
+    "listItems": [
+      "项目 1",
+      "项目 2",
+      "项目 3",
+      "项目 4"
+    ],
+    "menuLabels": [
+      "文件",
+      "视图",
+      "帮助"
+    ]
+  },
+  "bgType": 32
+}

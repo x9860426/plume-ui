@@ -1,0 +1,337 @@
+{
+  "name": "幽灵",
+  "colors": {
+    "bg1": [
+      13,
+      10,
+      20
+    ],
+    "bg2": [
+      26,
+      19,
+      38
+    ],
+    "bg3": [
+      13,
+      10,
+      20
+    ],
+    "bg4": [
+      13,
+      10,
+      20
+    ],
+    "text": [
+      208,
+      255,
+      224
+    ],
+    "title": [
+      110,
+      255,
+      160
+    ],
+    "accent": [
+      110,
+      255,
+      160
+    ],
+    "accent2": [
+      122,
+      77,
+      255
+    ],
+    "btnBg1": [
+      58,
+      42,
+      90
+    ],
+    "btnBg2": [
+      30,
+      20,
+      48
+    ],
+    "btnHover1": [
+      90,
+      61,
+      138
+    ],
+    "btnHover2": [
+      58,
+      42,
+      90
+    ],
+    "btnPressed": [
+      20,
+      14,
+      32
+    ],
+    "btnText": [
+      110,
+      255,
+      160
+    ],
+    "btnBorder": [
+      110,
+      255,
+      160
+    ],
+    "btnHoverBorder": [
+      191,
+      255,
+      221
+    ],
+    "inputBg": [
+      15,
+      10,
+      25
+    ],
+    "inputBorder": [
+      110,
+      255,
+      160
+    ],
+    "inputText": [
+      208,
+      255,
+      224
+    ],
+    "toggleOffBg": [
+      26,
+      19,
+      38
+    ],
+    "toggleOnBg": [
+      122,
+      77,
+      255
+    ],
+    "toggleOffBorder": [
+      110,
+      255,
+      160
+    ],
+    "toggleOnBorder": [
+      191,
+      255,
+      221
+    ],
+    "toggleOffSlider": [
+      110,
+      255,
+      160
+    ],
+    "toggleOnSlider": [
+      191,
+      255,
+      221
+    ],
+    "sliderGroove": [
+      26,
+      19,
+      38
+    ],
+    "sliderHandle": [
+      110,
+      255,
+      160
+    ],
+    "sliderHandleBorder": [
+      122,
+      77,
+      255
+    ],
+    "checkBorder": [
+      110,
+      255,
+      160
+    ],
+    "checkBg": [
+      15,
+      10,
+      25
+    ],
+    "checkCheckedBg": [
+      122,
+      77,
+      255
+    ],
+    "checkCheckedBorder": [
+      191,
+      255,
+      221
+    ],
+    "tabBg": [
+      26,
+      19,
+      38
+    ],
+    "tabSelBg": [
+      58,
+      42,
+      90
+    ],
+    "tabText": [
+      208,
+      255,
+      224
+    ],
+    "tabSelText": [
+      110,
+      255,
+      160
+    ],
+    "menuBg": [
+      13,
+      10,
+      20
+    ],
+    "menuText": [
+      208,
+      255,
+      224
+    ],
+    "menuSelBg": [
+      58,
+      42,
+      90
+    ],
+    "menuSelText": [
+      191,
+      255,
+      221
+    ],
+    "toolbarBg": [
+      13,
+      10,
+      20
+    ],
+    "toolbarHoverBg": [
+      58,
+      42,
+      90
+    ],
+    "statusBg": [
+      13,
+      10,
+      20
+    ],
+    "statusText": [
+      110,
+      255,
+      160
+    ],
+    "groupBorder": [
+      110,
+      255,
+      160
+    ],
+    "groupTitleBg": [
+      15,
+      10,
+      25
+    ],
+    "groupTitle": [
+      110,
+      255,
+      160
+    ],
+    "cardBg1": [
+      58,
+      42,
+      90
+    ],
+    "cardBg2": [
+      30,
+      20,
+      48
+    ],
+    "cardHoverBg1": [
+      90,
+      61,
+      138
+    ],
+    "cardHoverBg2": [
+      58,
+      42,
+      90
+    ],
+    "listBg": [
+      15,
+      10,
+      25
+    ],
+    "listBorder": [
+      110,
+      255,
+      160
+    ],
+    "listText": [
+      208,
+      255,
+      224
+    ],
+    "listSelBg": [
+      122,
+      77,
+      255
+    ],
+    "useGradient": true,
+    "antialias": true,
+    "btnRadius": 14,
+    "inputRadius": 10,
+    "toggleW": 60,
+    "toggleH": 32,
+    "toggleRadius": 14,
+    "toggleStyle": 3,
+    "checkRadius": 4,
+    "tabRadius": 14,
+    "groupRadius": 14,
+    "cardRadius": 14
+  },
+  "texts": {
+    "windowTitle": "幽灵",
+    "titleText": "幽灵 UI 模板",
+    "statusMsg": "飘渺无踪",
+    "demoGroupTitle": "交互控件演示",
+    "hSliderLabel": "水平滑动条：",
+    "vSliderLabel": "垂直滑动条：",
+    "toggleLabel": "自定义开关：",
+    "check1Text": "选项 1",
+    "check2Text": "选项 2",
+    "comboLabel": "下拉选择：",
+    "tab1Title": "概览",
+    "tab2Title": "列表",
+    "tab1Content": "幽灵般飘渺的幽绿界面",
+    "refreshBtnText": "刷新样式",
+    "fontName": "Segoe UI",
+    "loginTitle": "登录",
+    "loginIcon": "[USER]",
+    "settingsTitle": "设置",
+    "aboutTitle": "关于",
+    "cardTexts": [
+      "登录窗口",
+      "设置窗口",
+      "关于窗口",
+      "消息盒子"
+    ],
+    "comboItems": [
+      "选项 A",
+      "选项 B",
+      "选项 C",
+      "选项 D"
+    ],
+    "listItems": [
+      "项目 1",
+      "项目 2",
+      "项目 3",
+      "项目 4"
+    ],
+    "menuLabels": [
+      "文件",
+      "视图",
+      "帮助"
+    ]
+  },
+  "bgType": 16
+}

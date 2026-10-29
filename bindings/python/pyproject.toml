@@ -19,3 +19,6 @@ classifiers = [
 [tool.scikit-build]
 cmake.version = ">=3.20"
 wheel.packages = ["plume"]
+
+[tool.scikit-build.cmake.define]
+PLUME_BUILD_NATIVE = "OFF"

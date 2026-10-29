@@ -1,0 +1,337 @@
+{
+  "name": "死神",
+  "colors": {
+    "bg1": [
+      15,
+      15,
+      15
+    ],
+    "bg2": [
+      26,
+      21,
+      21
+    ],
+    "bg3": [
+      15,
+      15,
+      15
+    ],
+    "bg4": [
+      15,
+      15,
+      15
+    ],
+    "text": [
+      212,
+      197,
+      178
+    ],
+    "title": [
+      139,
+      0,
+      0
+    ],
+    "accent": [
+      139,
+      0,
+      0
+    ],
+    "accent2": [
+      178,
+      34,
+      34
+    ],
+    "btnBg1": [
+      42,
+      10,
+      10
+    ],
+    "btnBg2": [
+      26,
+      5,
+      5
+    ],
+    "btnHover1": [
+      58,
+      16,
+      16
+    ],
+    "btnHover2": [
+      42,
+      10,
+      10
+    ],
+    "btnPressed": [
+      15,
+      3,
+      3
+    ],
+    "btnText": [
+      178,
+      34,
+      34
+    ],
+    "btnBorder": [
+      139,
+      0,
+      0
+    ],
+    "btnHoverBorder": [
+      255,
+      68,
+      68
+    ],
+    "inputBg": [
+      20,
+      15,
+      15
+    ],
+    "inputBorder": [
+      139,
+      0,
+      0
+    ],
+    "inputText": [
+      212,
+      197,
+      178
+    ],
+    "toggleOffBg": [
+      26,
+      21,
+      21
+    ],
+    "toggleOnBg": [
+      74,
+      0,
+      0
+    ],
+    "toggleOffBorder": [
+      139,
+      0,
+      0
+    ],
+    "toggleOnBorder": [
+      255,
+      68,
+      68
+    ],
+    "toggleOffSlider": [
+      212,
+      197,
+      178
+    ],
+    "toggleOnSlider": [
+      255,
+      0,
+      0
+    ],
+    "sliderGroove": [
+      26,
+      21,
+      21
+    ],
+    "sliderHandle": [
+      139,
+      0,
+      0
+    ],
+    "sliderHandleBorder": [
+      255,
+      68,
+      68
+    ],
+    "checkBorder": [
+      139,
+      0,
+      0
+    ],
+    "checkBg": [
+      20,
+      15,
+      15
+    ],
+    "checkCheckedBg": [
+      74,
+      0,
+      0
+    ],
+    "checkCheckedBorder": [
+      255,
+      68,
+      68
+    ],
+    "tabBg": [
+      26,
+      21,
+      21
+    ],
+    "tabSelBg": [
+      42,
+      10,
+      10
+    ],
+    "tabText": [
+      212,
+      197,
+      178
+    ],
+    "tabSelText": [
+      178,
+      34,
+      34
+    ],
+    "menuBg": [
+      15,
+      15,
+      15
+    ],
+    "menuText": [
+      212,
+      197,
+      178
+    ],
+    "menuSelBg": [
+      42,
+      10,
+      10
+    ],
+    "menuSelText": [
+      178,
+      34,
+      34
+    ],
+    "toolbarBg": [
+      26,
+      21,
+      21
+    ],
+    "toolbarHoverBg": [
+      58,
+      16,
+      16
+    ],
+    "statusBg": [
+      15,
+      15,
+      15
+    ],
+    "statusText": [
+      178,
+      34,
+      34
+    ],
+    "groupBorder": [
+      139,
+      0,
+      0
+    ],
+    "groupTitleBg": [
+      20,
+      15,
+      15
+    ],
+    "groupTitle": [
+      139,
+      0,
+      0
+    ],
+    "cardBg1": [
+      42,
+      10,
+      10
+    ],
+    "cardBg2": [
+      26,
+      5,
+      5
+    ],
+    "cardHoverBg1": [
+      58,
+      16,
+      16
+    ],
+    "cardHoverBg2": [
+      42,
+      10,
+      10
+    ],
+    "listBg": [
+      20,
+      15,
+      15
+    ],
+    "listBorder": [
+      139,
+      0,
+      0
+    ],
+    "listText": [
+      212,
+      197,
+      178
+    ],
+    "listSelBg": [
+      74,
+      0,
+      0
+    ],
+    "useGradient": true,
+    "antialias": true,
+    "btnRadius": 8,
+    "inputRadius": 6,
+    "toggleW": 60,
+    "toggleH": 32,
+    "toggleRadius": 12,
+    "toggleStyle": 4,
+    "checkRadius": 3,
+    "tabRadius": 6,
+    "groupRadius": 8,
+    "cardRadius": 8
+  },
+  "texts": {
+    "windowTitle": "死神",
+    "titleText": "死神 UI 模板",
+    "statusMsg": "暗影降临",
+    "demoGroupTitle": "交互控件演示",
+    "hSliderLabel": "水平滑动条：",
+    "vSliderLabel": "垂直滑动条：",
+    "toggleLabel": "自定义开关：",
+    "check1Text": "选项 1",
+    "check2Text": "选项 2",
+    "comboLabel": "下拉选择：",
+    "tab1Title": "概览",
+    "tab2Title": "列表",
+    "tab1Content": "暗影笼罩，寂静无声",
+    "refreshBtnText": "刷新样式",
+    "fontName": "Georgia",
+    "loginTitle": "登录",
+    "loginIcon": "[USER]",
+    "settingsTitle": "设置",
+    "aboutTitle": "关于",
+    "cardTexts": [
+      "登录窗口",
+      "设置窗口",
+      "关于窗口",
+      "消息盒子"
+    ],
+    "comboItems": [
+      "选项 A",
+      "选项 B",
+      "选项 C",
+      "选项 D"
+    ],
+    "listItems": [
+      "项目 1",
+      "项目 2",
+      "项目 3",
+      "项目 4"
+    ],
+    "menuLabels": [
+      "文件",
+      "视图",
+      "帮助"
+    ]
+  },
+  "bgType": 24
+}

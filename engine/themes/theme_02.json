@@ -1,0 +1,337 @@
+{
+  "name": "电玩国度",
+  "colors": {
+    "bg1": [
+      10,
+      10,
+      26
+    ],
+    "bg2": [
+      10,
+      10,
+      26
+    ],
+    "bg3": [
+      10,
+      10,
+      26
+    ],
+    "bg4": [
+      10,
+      10,
+      26
+    ],
+    "text": [
+      0,
+      255,
+      204
+    ],
+    "title": [
+      255,
+      0,
+      200
+    ],
+    "accent": [
+      255,
+      0,
+      200
+    ],
+    "accent2": [
+      0,
+      255,
+      204
+    ],
+    "btnBg1": [
+      255,
+      0,
+      200
+    ],
+    "btnBg2": [
+      200,
+      0,
+      160
+    ],
+    "btnHover1": [
+      255,
+      51,
+      212
+    ],
+    "btnHover2": [
+      255,
+      0,
+      200
+    ],
+    "btnPressed": [
+      119,
+      0,
+      112
+    ],
+    "btnText": [
+      255,
+      255,
+      255
+    ],
+    "btnBorder": [
+      255,
+      102,
+      221
+    ],
+    "btnHoverBorder": [
+      255,
+      153,
+      238
+    ],
+    "inputBg": [
+      21,
+      21,
+      48
+    ],
+    "inputBorder": [
+      255,
+      0,
+      200
+    ],
+    "inputText": [
+      0,
+      255,
+      204
+    ],
+    "toggleOffBg": [
+      26,
+      26,
+      46
+    ],
+    "toggleOnBg": [
+      0,
+      51,
+      68
+    ],
+    "toggleOffBorder": [
+      0,
+      255,
+      204
+    ],
+    "toggleOnBorder": [
+      255,
+      0,
+      200
+    ],
+    "toggleOffSlider": [
+      0,
+      255,
+      204
+    ],
+    "toggleOnSlider": [
+      0,
+      255,
+      204
+    ],
+    "sliderGroove": [
+      42,
+      42,
+      64
+    ],
+    "sliderHandle": [
+      255,
+      0,
+      200
+    ],
+    "sliderHandleBorder": [
+      255,
+      102,
+      221
+    ],
+    "checkBorder": [
+      255,
+      0,
+      200
+    ],
+    "checkBg": [
+      21,
+      21,
+      48
+    ],
+    "checkCheckedBg": [
+      255,
+      0,
+      200
+    ],
+    "checkCheckedBorder": [
+      0,
+      255,
+      204
+    ],
+    "tabBg": [
+      42,
+      42,
+      64
+    ],
+    "tabSelBg": [
+      255,
+      0,
+      200
+    ],
+    "tabText": [
+      0,
+      255,
+      204
+    ],
+    "tabSelText": [
+      0,
+      0,
+      0
+    ],
+    "menuBg": [
+      26,
+      26,
+      53
+    ],
+    "menuText": [
+      0,
+      255,
+      204
+    ],
+    "menuSelBg": [
+      255,
+      0,
+      200
+    ],
+    "menuSelText": [
+      0,
+      0,
+      0
+    ],
+    "toolbarBg": [
+      18,
+      18,
+      42
+    ],
+    "toolbarHoverBg": [
+      255,
+      0,
+      200
+    ],
+    "statusBg": [
+      26,
+      26,
+      53
+    ],
+    "statusText": [
+      0,
+      255,
+      204
+    ],
+    "groupBorder": [
+      255,
+      0,
+      200
+    ],
+    "groupTitleBg": [
+      10,
+      10,
+      26
+    ],
+    "groupTitle": [
+      255,
+      0,
+      200
+    ],
+    "cardBg1": [
+      255,
+      0,
+      200
+    ],
+    "cardBg2": [
+      200,
+      0,
+      160
+    ],
+    "cardHoverBg1": [
+      255,
+      51,
+      212
+    ],
+    "cardHoverBg2": [
+      255,
+      0,
+      200
+    ],
+    "listBg": [
+      21,
+      21,
+      48
+    ],
+    "listBorder": [
+      255,
+      0,
+      200
+    ],
+    "listText": [
+      0,
+      255,
+      204
+    ],
+    "listSelBg": [
+      58,
+      0,
+      64
+    ],
+    "useGradient": false,
+    "antialias": false,
+    "btnRadius": 6,
+    "inputRadius": 4,
+    "toggleW": 60,
+    "toggleH": 32,
+    "toggleRadius": 4,
+    "toggleStyle": 1,
+    "checkRadius": 2,
+    "tabRadius": 4,
+    "groupRadius": 4,
+    "cardRadius": 6
+  },
+  "texts": {
+    "windowTitle": "电玩国度 赛博主题",
+    "titleText": "电玩国度 UI 模板",
+    "statusMsg": "电玩国度 像素与霓虹 游戏无处不在",
+    "demoGroupTitle": "交互控件演示",
+    "hSliderLabel": "能量等级 (水平)：",
+    "vSliderLabel": "护盾强度 (垂直)：",
+    "toggleLabel": "无敌模式：",
+    "check1Text": "自动瞄准",
+    "check2Text": "无限弹药",
+    "comboLabel": "角色职业：",
+    "tab1Title": "概览",
+    "tab2Title": "数据",
+    "tab1Content": "欢迎来到电玩国度！所有控件采用赛博霓虹风格。",
+    "refreshBtnText": "刷新样式",
+    "fontName": "Courier New",
+    "loginTitle": "玩家登陆",
+    "loginIcon": "[PLAY]",
+    "settingsTitle": "游戏设置",
+    "aboutTitle": "关于",
+    "cardTexts": [
+      "玩家登陆",
+      "游戏设置",
+      "关于",
+      "消息盒子"
+    ],
+    "comboItems": [
+      "忍者",
+      "骇客",
+      "战士",
+      "枪手"
+    ],
+    "listItems": [
+      "高分记录",
+      "成就列表",
+      "游戏日志",
+      "DLC管理"
+    ],
+    "menuLabels": [
+      "游戏",
+      "视图",
+      "帮助"
+    ]
+  },
+  "bgType": 2
+}

@@ -1,0 +1,337 @@
+{
+  "name": "月亮",
+  "colors": {
+    "bg1": [
+      11,
+      14,
+      26
+    ],
+    "bg2": [
+      21,
+      29,
+      58
+    ],
+    "bg3": [
+      11,
+      14,
+      26
+    ],
+    "bg4": [
+      11,
+      14,
+      26
+    ],
+    "text": [
+      224,
+      230,
+      240
+    ],
+    "title": [
+      170,
+      185,
+      217
+    ],
+    "accent": [
+      170,
+      185,
+      217
+    ],
+    "accent2": [
+      91,
+      111,
+      160
+    ],
+    "btnBg1": [
+      170,
+      185,
+      217
+    ],
+    "btnBg2": [
+      106,
+      123,
+      160
+    ],
+    "btnHover1": [
+      197,
+      209,
+      235
+    ],
+    "btnHover2": [
+      138,
+      156,
+      192
+    ],
+    "btnPressed": [
+      74,
+      90,
+      128
+    ],
+    "btnText": [
+      11,
+      14,
+      26
+    ],
+    "btnBorder": [
+      170,
+      185,
+      217
+    ],
+    "btnHoverBorder": [
+      208,
+      218,
+      240
+    ],
+    "inputBg": [
+      10,
+      15,
+      30
+    ],
+    "inputBorder": [
+      170,
+      185,
+      217
+    ],
+    "inputText": [
+      224,
+      230,
+      240
+    ],
+    "toggleOffBg": [
+      21,
+      29,
+      58
+    ],
+    "toggleOnBg": [
+      91,
+      111,
+      160
+    ],
+    "toggleOffBorder": [
+      170,
+      185,
+      217
+    ],
+    "toggleOnBorder": [
+      208,
+      218,
+      240
+    ],
+    "toggleOffSlider": [
+      224,
+      230,
+      240
+    ],
+    "toggleOnSlider": [
+      208,
+      218,
+      240
+    ],
+    "sliderGroove": [
+      21,
+      29,
+      58
+    ],
+    "sliderHandle": [
+      170,
+      185,
+      217
+    ],
+    "sliderHandleBorder": [
+      91,
+      111,
+      160
+    ],
+    "checkBorder": [
+      170,
+      185,
+      217
+    ],
+    "checkBg": [
+      10,
+      15,
+      30
+    ],
+    "checkCheckedBg": [
+      91,
+      111,
+      160
+    ],
+    "checkCheckedBorder": [
+      208,
+      218,
+      240
+    ],
+    "tabBg": [
+      21,
+      29,
+      58
+    ],
+    "tabSelBg": [
+      170,
+      185,
+      217
+    ],
+    "tabText": [
+      224,
+      230,
+      240
+    ],
+    "tabSelText": [
+      11,
+      14,
+      26
+    ],
+    "menuBg": [
+      11,
+      14,
+      26
+    ],
+    "menuText": [
+      224,
+      230,
+      240
+    ],
+    "menuSelBg": [
+      91,
+      111,
+      160
+    ],
+    "menuSelText": [
+      208,
+      218,
+      240
+    ],
+    "toolbarBg": [
+      11,
+      14,
+      26
+    ],
+    "toolbarHoverBg": [
+      91,
+      111,
+      160
+    ],
+    "statusBg": [
+      11,
+      14,
+      26
+    ],
+    "statusText": [
+      208,
+      218,
+      240
+    ],
+    "groupBorder": [
+      170,
+      185,
+      217
+    ],
+    "groupTitleBg": [
+      10,
+      15,
+      30
+    ],
+    "groupTitle": [
+      170,
+      185,
+      217
+    ],
+    "cardBg1": [
+      170,
+      185,
+      217
+    ],
+    "cardBg2": [
+      106,
+      123,
+      160
+    ],
+    "cardHoverBg1": [
+      197,
+      209,
+      235
+    ],
+    "cardHoverBg2": [
+      138,
+      156,
+      192
+    ],
+    "listBg": [
+      10,
+      15,
+      30
+    ],
+    "listBorder": [
+      170,
+      185,
+      217
+    ],
+    "listText": [
+      224,
+      230,
+      240
+    ],
+    "listSelBg": [
+      91,
+      111,
+      160
+    ],
+    "useGradient": true,
+    "antialias": true,
+    "btnRadius": 14,
+    "inputRadius": 10,
+    "toggleW": 60,
+    "toggleH": 30,
+    "toggleRadius": 14,
+    "toggleStyle": 0,
+    "checkRadius": 4,
+    "tabRadius": 14,
+    "groupRadius": 14,
+    "cardRadius": 14
+  },
+  "texts": {
+    "windowTitle": "月亮",
+    "titleText": "月亮 UI 模板",
+    "statusMsg": "月光如水",
+    "demoGroupTitle": "交互控件演示",
+    "hSliderLabel": "水平滑动条：",
+    "vSliderLabel": "垂直滑动条：",
+    "toggleLabel": "自定义开关：",
+    "check1Text": "选项 1",
+    "check2Text": "选项 2",
+    "comboLabel": "下拉选择：",
+    "tab1Title": "概览",
+    "tab2Title": "列表",
+    "tab1Content": "月色朦胧，宁静深远",
+    "refreshBtnText": "刷新样式",
+    "fontName": "Segoe UI",
+    "loginTitle": "登录",
+    "loginIcon": "[USER]",
+    "settingsTitle": "设置",
+    "aboutTitle": "关于",
+    "cardTexts": [
+      "登录窗口",
+      "设置窗口",
+      "关于窗口",
+      "消息盒子"
+    ],
+    "comboItems": [
+      "选项 A",
+      "选项 B",
+      "选项 C",
+      "选项 D"
+    ],
+    "listItems": [
+      "项目 1",
+      "项目 2",
+      "项目 3",
+      "项目 4"
+    ],
+    "menuLabels": [
+      "文件",
+      "视图",
+      "帮助"
+    ]
+  },
+  "bgType": 21
+}

@@ -1,0 +1,337 @@
+{
+  "name": "时间之主",
+  "colors": {
+    "bg1": [
+      212,
+      197,
+      169
+    ],
+    "bg2": [
+      232,
+      220,
+      200
+    ],
+    "bg3": [
+      212,
+      197,
+      169
+    ],
+    "bg4": [
+      212,
+      197,
+      169
+    ],
+    "text": [
+      62,
+      47,
+      28
+    ],
+    "title": [
+      62,
+      47,
+      28
+    ],
+    "accent": [
+      184,
+      134,
+      11
+    ],
+    "accent2": [
+      218,
+      165,
+      32
+    ],
+    "btnBg1": [
+      212,
+      175,
+      55
+    ],
+    "btnBg2": [
+      184,
+      134,
+      11
+    ],
+    "btnHover1": [
+      230,
+      200,
+      76
+    ],
+    "btnHover2": [
+      212,
+      175,
+      55
+    ],
+    "btnPressed": [
+      139,
+      105,
+      20
+    ],
+    "btnText": [
+      255,
+      255,
+      255
+    ],
+    "btnBorder": [
+      218,
+      165,
+      32
+    ],
+    "btnHoverBorder": [
+      255,
+      215,
+      0
+    ],
+    "inputBg": [
+      255,
+      251,
+      240
+    ],
+    "inputBorder": [
+      184,
+      134,
+      11
+    ],
+    "inputText": [
+      62,
+      47,
+      28
+    ],
+    "toggleOffBg": [
+      160,
+      132,
+      92
+    ],
+    "toggleOnBg": [
+      139,
+      105,
+      20
+    ],
+    "toggleOffBorder": [
+      184,
+      134,
+      11
+    ],
+    "toggleOnBorder": [
+      218,
+      165,
+      32
+    ],
+    "toggleOffSlider": [
+      205,
+      133,
+      63
+    ],
+    "toggleOnSlider": [
+      255,
+      215,
+      0
+    ],
+    "sliderGroove": [
+      212,
+      197,
+      169
+    ],
+    "sliderHandle": [
+      218,
+      165,
+      32
+    ],
+    "sliderHandleBorder": [
+      255,
+      215,
+      0
+    ],
+    "checkBorder": [
+      184,
+      134,
+      11
+    ],
+    "checkBg": [
+      255,
+      251,
+      240
+    ],
+    "checkCheckedBg": [
+      184,
+      134,
+      11
+    ],
+    "checkCheckedBorder": [
+      139,
+      105,
+      20
+    ],
+    "tabBg": [
+      212,
+      197,
+      169
+    ],
+    "tabSelBg": [
+      184,
+      134,
+      11
+    ],
+    "tabText": [
+      62,
+      47,
+      28
+    ],
+    "tabSelText": [
+      255,
+      255,
+      255
+    ],
+    "menuBg": [
+      212,
+      197,
+      169
+    ],
+    "menuText": [
+      62,
+      47,
+      28
+    ],
+    "menuSelBg": [
+      184,
+      134,
+      11
+    ],
+    "menuSelText": [
+      255,
+      255,
+      255
+    ],
+    "toolbarBg": [
+      232,
+      220,
+      200
+    ],
+    "toolbarHoverBg": [
+      212,
+      175,
+      55
+    ],
+    "statusBg": [
+      212,
+      197,
+      169
+    ],
+    "statusText": [
+      62,
+      47,
+      28
+    ],
+    "groupBorder": [
+      184,
+      134,
+      11
+    ],
+    "groupTitleBg": [
+      232,
+      220,
+      200
+    ],
+    "groupTitle": [
+      62,
+      47,
+      28
+    ],
+    "cardBg1": [
+      212,
+      175,
+      55
+    ],
+    "cardBg2": [
+      184,
+      134,
+      11
+    ],
+    "cardHoverBg1": [
+      230,
+      200,
+      76
+    ],
+    "cardHoverBg2": [
+      212,
+      175,
+      55
+    ],
+    "listBg": [
+      255,
+      251,
+      240
+    ],
+    "listBorder": [
+      184,
+      134,
+      11
+    ],
+    "listText": [
+      62,
+      47,
+      28
+    ],
+    "listSelBg": [
+      212,
+      197,
+      169
+    ],
+    "useGradient": true,
+    "antialias": true,
+    "btnRadius": 14,
+    "inputRadius": 10,
+    "toggleW": 60,
+    "toggleH": 32,
+    "toggleRadius": 12,
+    "toggleStyle": 2,
+    "checkRadius": 4,
+    "tabRadius": 10,
+    "groupRadius": 14,
+    "cardRadius": 14
+  },
+  "texts": {
+    "windowTitle": "时间之主 古典钟表主题",
+    "titleText": "时间之主 UI 模板",
+    "statusMsg": "时间缓缓流淌 珍惜每一刻",
+    "demoGroupTitle": "交互控件演示",
+    "hSliderLabel": "时间流速 (水平)：",
+    "vSliderLabel": "时光密度 (垂直)：",
+    "toggleLabel": "自动对时：",
+    "check1Text": "显示秒针",
+    "check2Text": "整点报时",
+    "comboLabel": "时间区域：",
+    "tab1Title": "概览",
+    "tab2Title": "记录",
+    "tab1Content": "时间主题界面，融合古典钟表美学与古铜贵族气息。",
+    "refreshBtnText": "刷新样式",
+    "fontName": "Times New Roman",
+    "loginTitle": "访客登记",
+    "loginIcon": "[KEY]",
+    "settingsTitle": "时刻设置",
+    "aboutTitle": "关于时间",
+    "cardTexts": [
+      "访客登记",
+      "时刻设置",
+      "关于时间",
+      "消息盒子"
+    ],
+    "comboItems": [
+      "东方",
+      "西方",
+      "南极",
+      "北极"
+    ],
+    "listItems": [
+      "日晷记录",
+      "沙漏计时",
+      "机械钟表",
+      "天文观测"
+    ],
+    "menuLabels": [
+      "时刻",
+      "视图",
+      "帮助"
+    ]
+  },
+  "bgType": 1
+}

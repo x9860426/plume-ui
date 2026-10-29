@@ -1,0 +1,337 @@
+{
+  "name": "火焰",
+  "colors": {
+    "bg1": [
+      26,
+      12,
+      10
+    ],
+    "bg2": [
+      62,
+      26,
+      20
+    ],
+    "bg3": [
+      122,
+      42,
+      26
+    ],
+    "bg4": [
+      181,
+      69,
+      28
+    ],
+    "text": [
+      255,
+      204,
+      128
+    ],
+    "title": [
+      255,
+      112,
+      67
+    ],
+    "accent": [
+      255,
+      112,
+      67
+    ],
+    "accent2": [
+      255,
+      87,
+      34
+    ],
+    "btnBg1": [
+      255,
+      87,
+      34
+    ],
+    "btnBg2": [
+      216,
+      67,
+      21
+    ],
+    "btnHover1": [
+      255,
+      112,
+      67
+    ],
+    "btnHover2": [
+      230,
+      74,
+      25
+    ],
+    "btnPressed": [
+      191,
+      54,
+      12
+    ],
+    "btnText": [
+      255,
+      255,
+      255
+    ],
+    "btnBorder": [
+      255,
+      112,
+      67
+    ],
+    "btnHoverBorder": [
+      255,
+      204,
+      128
+    ],
+    "inputBg": [
+      30,
+      10,
+      5
+    ],
+    "inputBorder": [
+      255,
+      112,
+      67
+    ],
+    "inputText": [
+      255,
+      204,
+      128
+    ],
+    "toggleOffBg": [
+      62,
+      26,
+      20
+    ],
+    "toggleOnBg": [
+      255,
+      87,
+      34
+    ],
+    "toggleOffBorder": [
+      255,
+      112,
+      67
+    ],
+    "toggleOnBorder": [
+      255,
+      204,
+      128
+    ],
+    "toggleOffSlider": [
+      255,
+      204,
+      128
+    ],
+    "toggleOnSlider": [
+      255,
+      224,
+      178
+    ],
+    "sliderGroove": [
+      62,
+      26,
+      20
+    ],
+    "sliderHandle": [
+      255,
+      87,
+      34
+    ],
+    "sliderHandleBorder": [
+      255,
+      112,
+      67
+    ],
+    "checkBorder": [
+      255,
+      112,
+      67
+    ],
+    "checkBg": [
+      30,
+      10,
+      5
+    ],
+    "checkCheckedBg": [
+      255,
+      87,
+      34
+    ],
+    "checkCheckedBorder": [
+      255,
+      204,
+      128
+    ],
+    "tabBg": [
+      62,
+      26,
+      20
+    ],
+    "tabSelBg": [
+      255,
+      87,
+      34
+    ],
+    "tabText": [
+      255,
+      204,
+      128
+    ],
+    "tabSelText": [
+      255,
+      255,
+      255
+    ],
+    "menuBg": [
+      26,
+      12,
+      10
+    ],
+    "menuText": [
+      255,
+      204,
+      128
+    ],
+    "menuSelBg": [
+      255,
+      87,
+      34
+    ],
+    "menuSelText": [
+      255,
+      255,
+      255
+    ],
+    "toolbarBg": [
+      62,
+      26,
+      20
+    ],
+    "toolbarHoverBg": [
+      255,
+      87,
+      34
+    ],
+    "statusBg": [
+      26,
+      12,
+      10
+    ],
+    "statusText": [
+      255,
+      112,
+      67
+    ],
+    "groupBorder": [
+      255,
+      112,
+      67
+    ],
+    "groupTitleBg": [
+      30,
+      10,
+      5
+    ],
+    "groupTitle": [
+      255,
+      112,
+      67
+    ],
+    "cardBg1": [
+      255,
+      87,
+      34
+    ],
+    "cardBg2": [
+      216,
+      67,
+      21
+    ],
+    "cardHoverBg1": [
+      255,
+      112,
+      67
+    ],
+    "cardHoverBg2": [
+      230,
+      74,
+      25
+    ],
+    "listBg": [
+      30,
+      10,
+      5
+    ],
+    "listBorder": [
+      255,
+      112,
+      67
+    ],
+    "listText": [
+      255,
+      204,
+      128
+    ],
+    "listSelBg": [
+      255,
+      87,
+      34
+    ],
+    "useGradient": true,
+    "antialias": true,
+    "btnRadius": 16,
+    "inputRadius": 12,
+    "toggleW": 60,
+    "toggleH": 32,
+    "toggleRadius": 16,
+    "toggleStyle": 1,
+    "checkRadius": 6,
+    "tabRadius": 16,
+    "groupRadius": 16,
+    "cardRadius": 16
+  },
+  "texts": {
+    "windowTitle": "火焰",
+    "titleText": "火焰 UI 模板",
+    "statusMsg": "燃烧中...",
+    "demoGroupTitle": "交互控件演示",
+    "hSliderLabel": "水平滑动条：",
+    "vSliderLabel": "垂直滑动条：",
+    "toggleLabel": "自定义开关：",
+    "check1Text": "选项 1",
+    "check2Text": "选项 2",
+    "comboLabel": "下拉选择：",
+    "tab1Title": "概览",
+    "tab2Title": "列表",
+    "tab1Content": "炽热的火焰界面，带来激情与活力",
+    "refreshBtnText": "刷新样式",
+    "fontName": "Segoe UI",
+    "loginTitle": "登录",
+    "loginIcon": "[USER]",
+    "settingsTitle": "设置",
+    "aboutTitle": "关于",
+    "cardTexts": [
+      "登录窗口",
+      "设置窗口",
+      "关于窗口",
+      "消息盒子"
+    ],
+    "comboItems": [
+      "选项 A",
+      "选项 B",
+      "选项 C",
+      "选项 D"
+    ],
+    "listItems": [
+      "项目 1",
+      "项目 2",
+      "项目 3",
+      "项目 4"
+    ],
+    "menuLabels": [
+      "文件",
+      "视图",
+      "帮助"
+    ]
+  },
+  "bgType": 27
+}

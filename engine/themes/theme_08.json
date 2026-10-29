@@ -1,0 +1,337 @@
+{
+  "name": "深空星舰",
+  "colors": {
+    "bg1": [
+      11,
+      13,
+      23
+    ],
+    "bg2": [
+      20,
+      24,
+      56
+    ],
+    "bg3": [
+      28,
+      32,
+      84
+    ],
+    "bg4": [
+      11,
+      13,
+      23
+    ],
+    "text": [
+      208,
+      234,
+      255
+    ],
+    "title": [
+      0,
+      229,
+      255
+    ],
+    "accent": [
+      0,
+      168,
+      255
+    ],
+    "accent2": [
+      123,
+      47,
+      247
+    ],
+    "btnBg1": [
+      26,
+      35,
+      126
+    ],
+    "btnBg2": [
+      13,
+      27,
+      94
+    ],
+    "btnHover1": [
+      40,
+      53,
+      147
+    ],
+    "btnHover2": [
+      26,
+      35,
+      126
+    ],
+    "btnPressed": [
+      13,
+      27,
+      94
+    ],
+    "btnText": [
+      0,
+      229,
+      255
+    ],
+    "btnBorder": [
+      0,
+      168,
+      255
+    ],
+    "btnHoverBorder": [
+      123,
+      47,
+      247
+    ],
+    "inputBg": [
+      10,
+      12,
+      30
+    ],
+    "inputBorder": [
+      0,
+      168,
+      255
+    ],
+    "inputText": [
+      208,
+      234,
+      255
+    ],
+    "toggleOffBg": [
+      20,
+      24,
+      56
+    ],
+    "toggleOnBg": [
+      28,
+      32,
+      84
+    ],
+    "toggleOffBorder": [
+      0,
+      168,
+      255
+    ],
+    "toggleOnBorder": [
+      0,
+      229,
+      255
+    ],
+    "toggleOffSlider": [
+      208,
+      234,
+      255
+    ],
+    "toggleOnSlider": [
+      208,
+      234,
+      255
+    ],
+    "sliderGroove": [
+      20,
+      24,
+      56
+    ],
+    "sliderHandle": [
+      0,
+      229,
+      255
+    ],
+    "sliderHandleBorder": [
+      123,
+      47,
+      247
+    ],
+    "checkBorder": [
+      0,
+      168,
+      255
+    ],
+    "checkBg": [
+      10,
+      12,
+      30
+    ],
+    "checkCheckedBg": [
+      0,
+      168,
+      255
+    ],
+    "checkCheckedBorder": [
+      123,
+      47,
+      247
+    ],
+    "tabBg": [
+      20,
+      24,
+      56
+    ],
+    "tabSelBg": [
+      0,
+      168,
+      255
+    ],
+    "tabText": [
+      208,
+      234,
+      255
+    ],
+    "tabSelText": [
+      11,
+      13,
+      23
+    ],
+    "menuBg": [
+      11,
+      13,
+      23
+    ],
+    "menuText": [
+      208,
+      234,
+      255
+    ],
+    "menuSelBg": [
+      28,
+      32,
+      84
+    ],
+    "menuSelText": [
+      208,
+      234,
+      255
+    ],
+    "toolbarBg": [
+      16,
+      18,
+      37
+    ],
+    "toolbarHoverBg": [
+      40,
+      53,
+      147
+    ],
+    "statusBg": [
+      5,
+      6,
+      10
+    ],
+    "statusText": [
+      0,
+      168,
+      255
+    ],
+    "groupBorder": [
+      0,
+      168,
+      255
+    ],
+    "groupTitleBg": [
+      11,
+      13,
+      23
+    ],
+    "groupTitle": [
+      0,
+      229,
+      255
+    ],
+    "cardBg1": [
+      26,
+      35,
+      126
+    ],
+    "cardBg2": [
+      13,
+      27,
+      94
+    ],
+    "cardHoverBg1": [
+      40,
+      53,
+      147
+    ],
+    "cardHoverBg2": [
+      26,
+      35,
+      126
+    ],
+    "listBg": [
+      10,
+      12,
+      30
+    ],
+    "listBorder": [
+      0,
+      168,
+      255
+    ],
+    "listText": [
+      208,
+      234,
+      255
+    ],
+    "listSelBg": [
+      123,
+      47,
+      247
+    ],
+    "useGradient": true,
+    "antialias": true,
+    "btnRadius": 12,
+    "inputRadius": 8,
+    "toggleW": 60,
+    "toggleH": 32,
+    "toggleRadius": 14,
+    "toggleStyle": 0,
+    "checkRadius": 2,
+    "tabRadius": 8,
+    "groupRadius": 14,
+    "cardRadius": 12
+  },
+  "texts": {
+    "windowTitle": "深空星舰 太空主题",
+    "titleText": "太空主题 UI 模板",
+    "statusMsg": "曲速引擎待命 星舰状态良好 下一目标：半人马座阿尔法",
+    "demoGroupTitle": "太空舱控制面板",
+    "hSliderLabel": "引擎推力 (水平)：",
+    "vSliderLabel": "护盾能量 (垂直)：",
+    "toggleLabel": "隐形系统：",
+    "check1Text": "自动驾驶",
+    "check2Text": "生命维持",
+    "comboLabel": "导航目标：",
+    "tab1Title": "舰桥",
+    "tab2Title": "系统",
+    "tab1Content": "欢迎登舰，所有系统已就绪。太空主题控件展示。",
+    "refreshBtnText": "刷新风格",
+    "fontName": "Arial",
+    "loginTitle": "星舰指挥官登入",
+    "loginIcon": "[STAR]",
+    "settingsTitle": "设置",
+    "aboutTitle": "关于",
+    "cardTexts": [
+      "登录窗口",
+      "设置窗口",
+      "关于窗口",
+      "消息盒子"
+    ],
+    "comboItems": [
+      "半人马座a",
+      "比邻星",
+      "猎户座星云",
+      "仙女座星系"
+    ],
+    "listItems": [
+      "曲速引擎",
+      "光子鱼雷",
+      "护盾矩阵",
+      "传送室"
+    ],
+    "menuLabels": [
+      "文件",
+      "视图",
+      "帮助"
+    ]
+  },
+  "bgType": 8
+}

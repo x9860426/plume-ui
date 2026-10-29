@@ -1,0 +1,337 @@
+{
+  "name": "萌趣乐园",
+  "colors": {
+    "bg1": [
+      255,
+      209,
+      220
+    ],
+    "bg2": [
+      255,
+      240,
+      245
+    ],
+    "bg3": [
+      255,
+      209,
+      220
+    ],
+    "bg4": [
+      255,
+      240,
+      245
+    ],
+    "text": [
+      109,
+      76,
+      94
+    ],
+    "title": [
+      176,
+      107,
+      130
+    ],
+    "accent": [
+      255,
+      105,
+      180
+    ],
+    "accent2": [
+      255,
+      182,
+      193
+    ],
+    "btnBg1": [
+      255,
+      182,
+      193
+    ],
+    "btnBg2": [
+      255,
+      105,
+      180
+    ],
+    "btnHover1": [
+      255,
+      192,
+      203
+    ],
+    "btnHover2": [
+      255,
+      133,
+      192
+    ],
+    "btnPressed": [
+      255,
+      153,
+      170
+    ],
+    "btnText": [
+      255,
+      255,
+      255
+    ],
+    "btnBorder": [
+      255,
+      182,
+      193
+    ],
+    "btnHoverBorder": [
+      255,
+      154,
+      173
+    ],
+    "inputBg": [
+      255,
+      255,
+      255
+    ],
+    "inputBorder": [
+      255,
+      182,
+      193
+    ],
+    "inputText": [
+      109,
+      76,
+      94
+    ],
+    "toggleOffBg": [
+      255,
+      209,
+      220
+    ],
+    "toggleOnBg": [
+      255,
+      153,
+      170
+    ],
+    "toggleOffBorder": [
+      255,
+      182,
+      193
+    ],
+    "toggleOnBorder": [
+      255,
+      123,
+      156
+    ],
+    "toggleOffSlider": [
+      255,
+      255,
+      255
+    ],
+    "toggleOnSlider": [
+      255,
+      255,
+      255
+    ],
+    "sliderGroove": [
+      255,
+      209,
+      220
+    ],
+    "sliderHandle": [
+      255,
+      105,
+      180
+    ],
+    "sliderHandleBorder": [
+      255,
+      255,
+      255
+    ],
+    "checkBorder": [
+      255,
+      182,
+      193
+    ],
+    "checkBg": [
+      255,
+      255,
+      255
+    ],
+    "checkCheckedBg": [
+      255,
+      153,
+      170
+    ],
+    "checkCheckedBorder": [
+      255,
+      123,
+      156
+    ],
+    "tabBg": [
+      255,
+      228,
+      233
+    ],
+    "tabSelBg": [
+      255,
+      255,
+      255
+    ],
+    "tabText": [
+      168,
+      99,
+      123
+    ],
+    "tabSelText": [
+      109,
+      76,
+      94
+    ],
+    "menuBg": [
+      255,
+      228,
+      233
+    ],
+    "menuText": [
+      109,
+      76,
+      94
+    ],
+    "menuSelBg": [
+      255,
+      204,
+      213
+    ],
+    "menuSelText": [
+      109,
+      76,
+      94
+    ],
+    "toolbarBg": [
+      255,
+      228,
+      233
+    ],
+    "toolbarHoverBg": [
+      255,
+      204,
+      213
+    ],
+    "statusBg": [
+      255,
+      228,
+      233
+    ],
+    "statusText": [
+      168,
+      99,
+      123
+    ],
+    "groupBorder": [
+      255,
+      182,
+      193
+    ],
+    "groupTitleBg": [
+      255,
+      255,
+      255
+    ],
+    "groupTitle": [
+      176,
+      107,
+      130
+    ],
+    "cardBg1": [
+      255,
+      182,
+      193
+    ],
+    "cardBg2": [
+      255,
+      105,
+      180
+    ],
+    "cardHoverBg1": [
+      255,
+      192,
+      203
+    ],
+    "cardHoverBg2": [
+      255,
+      133,
+      192
+    ],
+    "listBg": [
+      255,
+      255,
+      255
+    ],
+    "listBorder": [
+      255,
+      182,
+      193
+    ],
+    "listText": [
+      109,
+      76,
+      94
+    ],
+    "listSelBg": [
+      255,
+      153,
+      170
+    ],
+    "useGradient": true,
+    "antialias": true,
+    "btnRadius": 24,
+    "inputRadius": 18,
+    "toggleW": 56,
+    "toggleH": 30,
+    "toggleRadius": 15,
+    "toggleStyle": 3,
+    "checkRadius": 6,
+    "tabRadius": 16,
+    "groupRadius": 20,
+    "cardRadius": 24
+  },
+  "texts": {
+    "windowTitle": "萌趣乐园 可爱界面模板",
+    "titleText": "萌系 UI 模板集",
+    "statusMsg": "今天也是超可爱的一天！",
+    "demoGroupTitle": "可爱控件们",
+    "hSliderLabel": "糖果横轴：",
+    "vSliderLabel": "巧克力竖轴：",
+    "toggleLabel": "小开关：",
+    "check1Text": "草莓味",
+    "check2Text": "香草味",
+    "comboLabel": "选择玩偶：",
+    "tab1Title": "欢迎",
+    "tab2Title": "甜品",
+    "tab1Content": "这里可以放任何可爱的小组件哦！",
+    "refreshBtnText": "刷新萌力",
+    "fontName": "Comic Sans MS",
+    "loginTitle": "甜甜登录",
+    "loginIcon": "[CANDY]",
+    "settingsTitle": "小物设置",
+    "aboutTitle": "草莓关于",
+    "cardTexts": [
+      "甜甜登录",
+      "小物设置",
+      "草莓关于",
+      "消息"
+    ],
+    "comboItems": [
+      "小熊软糖",
+      "兔兔棉花糖",
+      "猫咪布丁",
+      "小狗甜甜圈"
+    ],
+    "listItems": [
+      "草莓蛋糕",
+      "马卡龙",
+      "布丁",
+      "甜甜圈"
+    ],
+    "menuLabels": [
+      "文件",
+      "视图",
+      "帮助"
+    ]
+  },
+  "bgType": 3
+}

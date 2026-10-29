@@ -1,0 +1,337 @@
+{
+  "name": "王国",
+  "colors": {
+    "bg1": [
+      10,
+      26,
+      58
+    ],
+    "bg2": [
+      22,
+      36,
+      71
+    ],
+    "bg3": [
+      13,
+      27,
+      42
+    ],
+    "bg4": [
+      13,
+      27,
+      42
+    ],
+    "text": [
+      240,
+      230,
+      210
+    ],
+    "title": [
+      201,
+      168,
+      76
+    ],
+    "accent": [
+      201,
+      168,
+      76
+    ],
+    "accent2": [
+      139,
+      101,
+      8
+    ],
+    "btnBg1": [
+      31,
+      58,
+      95
+    ],
+    "btnBg2": [
+      41,
+      75,
+      122
+    ],
+    "btnHover1": [
+      45,
+      79,
+      124
+    ],
+    "btnHover2": [
+      58,
+      107,
+      158
+    ],
+    "btnPressed": [
+      13,
+      27,
+      42
+    ],
+    "btnText": [
+      240,
+      230,
+      210
+    ],
+    "btnBorder": [
+      201,
+      168,
+      76
+    ],
+    "btnHoverBorder": [
+      229,
+      200,
+      132
+    ],
+    "inputBg": [
+      27,
+      45,
+      74
+    ],
+    "inputBorder": [
+      201,
+      168,
+      76
+    ],
+    "inputText": [
+      240,
+      230,
+      210
+    ],
+    "toggleOffBg": [
+      22,
+      36,
+      71
+    ],
+    "toggleOnBg": [
+      139,
+      101,
+      8
+    ],
+    "toggleOffBorder": [
+      201,
+      168,
+      76
+    ],
+    "toggleOnBorder": [
+      229,
+      200,
+      132
+    ],
+    "toggleOffSlider": [
+      240,
+      230,
+      210
+    ],
+    "toggleOnSlider": [
+      229,
+      200,
+      132
+    ],
+    "sliderGroove": [
+      22,
+      36,
+      71
+    ],
+    "sliderHandle": [
+      201,
+      168,
+      76
+    ],
+    "sliderHandleBorder": [
+      229,
+      200,
+      132
+    ],
+    "checkBorder": [
+      201,
+      168,
+      76
+    ],
+    "checkBg": [
+      27,
+      45,
+      74
+    ],
+    "checkCheckedBg": [
+      139,
+      101,
+      8
+    ],
+    "checkCheckedBorder": [
+      229,
+      200,
+      132
+    ],
+    "tabBg": [
+      22,
+      36,
+      71
+    ],
+    "tabSelBg": [
+      31,
+      58,
+      95
+    ],
+    "tabText": [
+      240,
+      230,
+      210
+    ],
+    "tabSelText": [
+      201,
+      168,
+      76
+    ],
+    "menuBg": [
+      10,
+      26,
+      58
+    ],
+    "menuText": [
+      240,
+      230,
+      210
+    ],
+    "menuSelBg": [
+      31,
+      58,
+      95
+    ],
+    "menuSelText": [
+      201,
+      168,
+      76
+    ],
+    "toolbarBg": [
+      13,
+      27,
+      42
+    ],
+    "toolbarHoverBg": [
+      31,
+      58,
+      95
+    ],
+    "statusBg": [
+      10,
+      26,
+      58
+    ],
+    "statusText": [
+      201,
+      168,
+      76
+    ],
+    "groupBorder": [
+      201,
+      168,
+      76
+    ],
+    "groupTitleBg": [
+      22,
+      36,
+      71
+    ],
+    "groupTitle": [
+      201,
+      168,
+      76
+    ],
+    "cardBg1": [
+      31,
+      58,
+      95
+    ],
+    "cardBg2": [
+      41,
+      75,
+      122
+    ],
+    "cardHoverBg1": [
+      45,
+      79,
+      124
+    ],
+    "cardHoverBg2": [
+      58,
+      107,
+      158
+    ],
+    "listBg": [
+      27,
+      45,
+      74
+    ],
+    "listBorder": [
+      201,
+      168,
+      76
+    ],
+    "listText": [
+      240,
+      230,
+      210
+    ],
+    "listSelBg": [
+      139,
+      101,
+      8
+    ],
+    "useGradient": true,
+    "antialias": true,
+    "btnRadius": 10,
+    "inputRadius": 8,
+    "toggleW": 56,
+    "toggleH": 30,
+    "toggleRadius": 12,
+    "toggleStyle": 2,
+    "checkRadius": 4,
+    "tabRadius": 10,
+    "groupRadius": 10,
+    "cardRadius": 10
+  },
+  "texts": {
+    "windowTitle": "王国",
+    "titleText": "王国 UI 模板",
+    "statusMsg": "王国繁荣...",
+    "demoGroupTitle": "交互控件演示",
+    "hSliderLabel": "水平滑动条：",
+    "vSliderLabel": "垂直滑动条：",
+    "toggleLabel": "自定义开关：",
+    "check1Text": "选项 1",
+    "check2Text": "选项 2",
+    "comboLabel": "下拉选择：",
+    "tab1Title": "概览",
+    "tab2Title": "列表",
+    "tab1Content": "尊贵的王国风格，彰显皇家气派",
+    "refreshBtnText": "刷新样式",
+    "fontName": "Georgia",
+    "loginTitle": "登录",
+    "loginIcon": "[USER]",
+    "settingsTitle": "设置",
+    "aboutTitle": "关于",
+    "cardTexts": [
+      "登录窗口",
+      "设置窗口",
+      "关于窗口",
+      "消息盒子"
+    ],
+    "comboItems": [
+      "选项 A",
+      "选项 B",
+      "选项 C",
+      "选项 D"
+    ],
+    "listItems": [
+      "项目 1",
+      "项目 2",
+      "项目 3",
+      "项目 4"
+    ],
+    "menuLabels": [
+      "文件",
+      "视图",
+      "帮助"
+    ]
+  },
+  "bgType": 29
+}

@@ -1,0 +1,337 @@
+{
+  "name": "魔法风格",
+  "colors": {
+    "bg1": [
+      26,
+      15,
+      46
+    ],
+    "bg2": [
+      45,
+      27,
+      78
+    ],
+    "bg3": [
+      58,
+      37,
+      104
+    ],
+    "bg4": [
+      26,
+      15,
+      46
+    ],
+    "text": [
+      230,
+      217,
+      184
+    ],
+    "title": [
+      201,
+      162,
+      39
+    ],
+    "accent": [
+      201,
+      162,
+      39
+    ],
+    "accent2": [
+      123,
+      75,
+      148
+    ],
+    "btnBg1": [
+      123,
+      75,
+      148
+    ],
+    "btnBg2": [
+      74,
+      44,
+      110
+    ],
+    "btnHover1": [
+      148,
+      97,
+      181
+    ],
+    "btnHover2": [
+      106,
+      61,
+      138
+    ],
+    "btnPressed": [
+      45,
+      27,
+      78
+    ],
+    "btnText": [
+      230,
+      217,
+      184
+    ],
+    "btnBorder": [
+      201,
+      162,
+      39
+    ],
+    "btnHoverBorder": [
+      240,
+      230,
+      140
+    ],
+    "inputBg": [
+      20,
+      15,
+      40
+    ],
+    "inputBorder": [
+      201,
+      162,
+      39
+    ],
+    "inputText": [
+      230,
+      217,
+      184
+    ],
+    "toggleOffBg": [
+      45,
+      27,
+      78
+    ],
+    "toggleOnBg": [
+      123,
+      75,
+      148
+    ],
+    "toggleOffBorder": [
+      201,
+      162,
+      39
+    ],
+    "toggleOnBorder": [
+      240,
+      230,
+      140
+    ],
+    "toggleOffSlider": [
+      230,
+      217,
+      184
+    ],
+    "toggleOnSlider": [
+      240,
+      230,
+      140
+    ],
+    "sliderGroove": [
+      45,
+      27,
+      78
+    ],
+    "sliderHandle": [
+      201,
+      162,
+      39
+    ],
+    "sliderHandleBorder": [
+      240,
+      230,
+      140
+    ],
+    "checkBorder": [
+      201,
+      162,
+      39
+    ],
+    "checkBg": [
+      20,
+      15,
+      40
+    ],
+    "checkCheckedBg": [
+      123,
+      75,
+      148
+    ],
+    "checkCheckedBorder": [
+      240,
+      230,
+      140
+    ],
+    "tabBg": [
+      45,
+      27,
+      78
+    ],
+    "tabSelBg": [
+      123,
+      75,
+      148
+    ],
+    "tabText": [
+      230,
+      217,
+      184
+    ],
+    "tabSelText": [
+      240,
+      230,
+      140
+    ],
+    "menuBg": [
+      26,
+      15,
+      46
+    ],
+    "menuText": [
+      230,
+      217,
+      184
+    ],
+    "menuSelBg": [
+      123,
+      75,
+      148
+    ],
+    "menuSelText": [
+      240,
+      230,
+      140
+    ],
+    "toolbarBg": [
+      45,
+      27,
+      78
+    ],
+    "toolbarHoverBg": [
+      123,
+      75,
+      148
+    ],
+    "statusBg": [
+      26,
+      15,
+      46
+    ],
+    "statusText": [
+      201,
+      162,
+      39
+    ],
+    "groupBorder": [
+      201,
+      162,
+      39
+    ],
+    "groupTitleBg": [
+      20,
+      15,
+      40
+    ],
+    "groupTitle": [
+      201,
+      162,
+      39
+    ],
+    "cardBg1": [
+      123,
+      75,
+      148
+    ],
+    "cardBg2": [
+      74,
+      44,
+      110
+    ],
+    "cardHoverBg1": [
+      148,
+      97,
+      181
+    ],
+    "cardHoverBg2": [
+      106,
+      61,
+      138
+    ],
+    "listBg": [
+      20,
+      15,
+      40
+    ],
+    "listBorder": [
+      201,
+      162,
+      39
+    ],
+    "listText": [
+      230,
+      217,
+      184
+    ],
+    "listSelBg": [
+      123,
+      75,
+      148
+    ],
+    "useGradient": true,
+    "antialias": true,
+    "btnRadius": 14,
+    "inputRadius": 10,
+    "toggleW": 60,
+    "toggleH": 32,
+    "toggleRadius": 15,
+    "toggleStyle": 3,
+    "checkRadius": 4,
+    "tabRadius": 14,
+    "groupRadius": 14,
+    "cardRadius": 14
+  },
+  "texts": {
+    "windowTitle": "魔法风格",
+    "titleText": "魔法风格 UI 模板",
+    "statusMsg": "魔法涌动...",
+    "demoGroupTitle": "交互控件演示",
+    "hSliderLabel": "水平滑动条：",
+    "vSliderLabel": "垂直滑动条：",
+    "toggleLabel": "自定义开关：",
+    "check1Text": "选项 1",
+    "check2Text": "选项 2",
+    "comboLabel": "下拉选择：",
+    "tab1Title": "概览",
+    "tab2Title": "列表",
+    "tab1Content": "奇幻的魔法界面，充满神秘与魔力",
+    "refreshBtnText": "刷新样式",
+    "fontName": "Georgia",
+    "loginTitle": "登录",
+    "loginIcon": "[USER]",
+    "settingsTitle": "设置",
+    "aboutTitle": "关于",
+    "cardTexts": [
+      "登录窗口",
+      "设置窗口",
+      "关于窗口",
+      "消息盒子"
+    ],
+    "comboItems": [
+      "选项 A",
+      "选项 B",
+      "选项 C",
+      "选项 D"
+    ],
+    "listItems": [
+      "项目 1",
+      "项目 2",
+      "项目 3",
+      "项目 4"
+    ],
+    "menuLabels": [
+      "文件",
+      "视图",
+      "帮助"
+    ]
+  },
+  "bgType": 34
+}

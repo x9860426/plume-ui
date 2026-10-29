@@ -1,0 +1,337 @@
+{
+  "name": "深空矩阵",
+  "colors": {
+    "bg1": [
+      10,
+      11,
+      16
+    ],
+    "bg2": [
+      20,
+      22,
+      43
+    ],
+    "bg3": [
+      26,
+      30,
+      58
+    ],
+    "bg4": [
+      15,
+      26,
+      47
+    ],
+    "text": [
+      176,
+      240,
+      255
+    ],
+    "title": [
+      0,
+      212,
+      255
+    ],
+    "accent": [
+      0,
+      212,
+      255
+    ],
+    "accent2": [
+      123,
+      47,
+      247
+    ],
+    "btnBg1": [
+      45,
+      47,
+      69
+    ],
+    "btnBg2": [
+      26,
+      30,
+      58
+    ],
+    "btnHover1": [
+      63,
+      66,
+      96
+    ],
+    "btnHover2": [
+      42,
+      46,
+      74
+    ],
+    "btnPressed": [
+      15,
+      26,
+      47
+    ],
+    "btnText": [
+      0,
+      212,
+      255
+    ],
+    "btnBorder": [
+      0,
+      212,
+      255
+    ],
+    "btnHoverBorder": [
+      123,
+      47,
+      247
+    ],
+    "inputBg": [
+      10,
+      12,
+      20
+    ],
+    "inputBorder": [
+      0,
+      212,
+      255
+    ],
+    "inputText": [
+      176,
+      240,
+      255
+    ],
+    "toggleOffBg": [
+      26,
+      30,
+      58
+    ],
+    "toggleOnBg": [
+      123,
+      47,
+      247
+    ],
+    "toggleOffBorder": [
+      0,
+      212,
+      255
+    ],
+    "toggleOnBorder": [
+      0,
+      255,
+      200
+    ],
+    "toggleOffSlider": [
+      0,
+      212,
+      255
+    ],
+    "toggleOnSlider": [
+      0,
+      212,
+      255
+    ],
+    "sliderGroove": [
+      26,
+      30,
+      58
+    ],
+    "sliderHandle": [
+      0,
+      212,
+      255
+    ],
+    "sliderHandleBorder": [
+      123,
+      47,
+      247
+    ],
+    "checkBorder": [
+      0,
+      212,
+      255
+    ],
+    "checkBg": [
+      10,
+      12,
+      20
+    ],
+    "checkCheckedBg": [
+      0,
+      212,
+      255
+    ],
+    "checkCheckedBorder": [
+      123,
+      47,
+      247
+    ],
+    "tabBg": [
+      26,
+      30,
+      58
+    ],
+    "tabSelBg": [
+      0,
+      212,
+      255
+    ],
+    "tabText": [
+      176,
+      240,
+      255
+    ],
+    "tabSelText": [
+      10,
+      11,
+      16
+    ],
+    "menuBg": [
+      10,
+      11,
+      16
+    ],
+    "menuText": [
+      0,
+      212,
+      255
+    ],
+    "menuSelBg": [
+      26,
+      30,
+      58
+    ],
+    "menuSelText": [
+      0,
+      212,
+      255
+    ],
+    "toolbarBg": [
+      15,
+      18,
+      32
+    ],
+    "toolbarHoverBg": [
+      45,
+      47,
+      69
+    ],
+    "statusBg": [
+      5,
+      6,
+      10
+    ],
+    "statusText": [
+      0,
+      212,
+      255
+    ],
+    "groupBorder": [
+      0,
+      212,
+      255
+    ],
+    "groupTitleBg": [
+      10,
+      11,
+      16
+    ],
+    "groupTitle": [
+      0,
+      212,
+      255
+    ],
+    "cardBg1": [
+      45,
+      47,
+      69
+    ],
+    "cardBg2": [
+      26,
+      30,
+      58
+    ],
+    "cardHoverBg1": [
+      63,
+      66,
+      96
+    ],
+    "cardHoverBg2": [
+      42,
+      46,
+      74
+    ],
+    "listBg": [
+      10,
+      12,
+      20
+    ],
+    "listBorder": [
+      0,
+      212,
+      255
+    ],
+    "listText": [
+      176,
+      240,
+      255
+    ],
+    "listSelBg": [
+      123,
+      47,
+      247
+    ],
+    "useGradient": true,
+    "antialias": true,
+    "btnRadius": 12,
+    "inputRadius": 8,
+    "toggleW": 60,
+    "toggleH": 30,
+    "toggleRadius": 14,
+    "toggleStyle": 0,
+    "checkRadius": 2,
+    "tabRadius": 8,
+    "groupRadius": 14,
+    "cardRadius": 12
+  },
+  "texts": {
+    "windowTitle": "深空矩阵 科幻主题",
+    "titleText": "科幻主题 UI 模板集合",
+    "statusMsg": "系统在线 量子核心温度2.7K 神经链接就绪",
+    "demoGroupTitle": "交互控件演示",
+    "hSliderLabel": "水平滑动条：",
+    "vSliderLabel": "垂直滑动条：",
+    "toggleLabel": "自定义开关：",
+    "check1Text": "选项 Alpha",
+    "check2Text": "选项 Beta",
+    "comboLabel": "下拉选择：",
+    "tab1Title": "仪表盘",
+    "tab2Title": "科技树",
+    "tab1Content": "这里可以放置任何自定义内容，所有控件自动应用科幻主题。",
+    "refreshBtnText": "刷新样式",
+    "fontName": "Arial",
+    "loginTitle": "神经链接接入点",
+    "loginIcon": "[NET]",
+    "settingsTitle": "设置",
+    "aboutTitle": "关于",
+    "cardTexts": [
+      "登录窗口",
+      "设置窗口",
+      "关于窗口",
+      "消息盒子"
+    ],
+    "comboItems": [
+      "量子计算",
+      "星际航行",
+      "人工智能",
+      "时间悖论"
+    ],
+    "listItems": [
+      "曲速引擎",
+      "暗物质",
+      "虫洞跳跃",
+      "二向箔"
+    ],
+    "menuLabels": [
+      "文件",
+      "视图",
+      "帮助"
+    ]
+  },
+  "bgType": 4
+}

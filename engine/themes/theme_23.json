@@ -1,0 +1,337 @@
+{
+  "name": "机器人",
+  "colors": {
+    "bg1": [
+      13,
+      17,
+      23
+    ],
+    "bg2": [
+      13,
+      17,
+      23
+    ],
+    "bg3": [
+      13,
+      17,
+      23
+    ],
+    "bg4": [
+      13,
+      17,
+      23
+    ],
+    "text": [
+      201,
+      209,
+      217
+    ],
+    "title": [
+      0,
+      212,
+      255
+    ],
+    "accent": [
+      0,
+      212,
+      255
+    ],
+    "accent2": [
+      51,
+      224,
+      255
+    ],
+    "btnBg1": [
+      74,
+      85,
+      104
+    ],
+    "btnBg2": [
+      45,
+      55,
+      72
+    ],
+    "btnHover1": [
+      113,
+      128,
+      150
+    ],
+    "btnHover2": [
+      74,
+      85,
+      104
+    ],
+    "btnPressed": [
+      26,
+      32,
+      44
+    ],
+    "btnText": [
+      226,
+      232,
+      240
+    ],
+    "btnBorder": [
+      0,
+      212,
+      255
+    ],
+    "btnHoverBorder": [
+      51,
+      224,
+      255
+    ],
+    "inputBg": [
+      22,
+      27,
+      34
+    ],
+    "inputBorder": [
+      0,
+      212,
+      255
+    ],
+    "inputText": [
+      201,
+      209,
+      217
+    ],
+    "toggleOffBg": [
+      30,
+      41,
+      59
+    ],
+    "toggleOnBg": [
+      15,
+      38,
+      51
+    ],
+    "toggleOffBorder": [
+      0,
+      212,
+      255
+    ],
+    "toggleOnBorder": [
+      51,
+      255,
+      221
+    ],
+    "toggleOffSlider": [
+      201,
+      209,
+      217
+    ],
+    "toggleOnSlider": [
+      0,
+      212,
+      255
+    ],
+    "sliderGroove": [
+      26,
+      32,
+      44
+    ],
+    "sliderHandle": [
+      0,
+      212,
+      255
+    ],
+    "sliderHandleBorder": [
+      51,
+      224,
+      255
+    ],
+    "checkBorder": [
+      0,
+      212,
+      255
+    ],
+    "checkBg": [
+      22,
+      27,
+      34
+    ],
+    "checkCheckedBg": [
+      0,
+      212,
+      255
+    ],
+    "checkCheckedBorder": [
+      51,
+      255,
+      221
+    ],
+    "tabBg": [
+      22,
+      27,
+      34
+    ],
+    "tabSelBg": [
+      45,
+      55,
+      72
+    ],
+    "tabText": [
+      201,
+      209,
+      217
+    ],
+    "tabSelText": [
+      0,
+      212,
+      255
+    ],
+    "menuBg": [
+      13,
+      17,
+      23
+    ],
+    "menuText": [
+      201,
+      209,
+      217
+    ],
+    "menuSelBg": [
+      45,
+      55,
+      72
+    ],
+    "menuSelText": [
+      0,
+      212,
+      255
+    ],
+    "toolbarBg": [
+      22,
+      27,
+      34
+    ],
+    "toolbarHoverBg": [
+      45,
+      55,
+      72
+    ],
+    "statusBg": [
+      13,
+      17,
+      23
+    ],
+    "statusText": [
+      0,
+      212,
+      255
+    ],
+    "groupBorder": [
+      0,
+      212,
+      255
+    ],
+    "groupTitleBg": [
+      13,
+      17,
+      23
+    ],
+    "groupTitle": [
+      0,
+      212,
+      255
+    ],
+    "cardBg1": [
+      74,
+      85,
+      104
+    ],
+    "cardBg2": [
+      45,
+      55,
+      72
+    ],
+    "cardHoverBg1": [
+      113,
+      128,
+      150
+    ],
+    "cardHoverBg2": [
+      74,
+      85,
+      104
+    ],
+    "listBg": [
+      22,
+      27,
+      34
+    ],
+    "listBorder": [
+      0,
+      212,
+      255
+    ],
+    "listText": [
+      201,
+      209,
+      217
+    ],
+    "listSelBg": [
+      45,
+      55,
+      72
+    ],
+    "useGradient": false,
+    "antialias": true,
+    "btnRadius": 6,
+    "inputRadius": 6,
+    "toggleW": 60,
+    "toggleH": 30,
+    "toggleRadius": 12,
+    "toggleStyle": 1,
+    "checkRadius": 2,
+    "tabRadius": 6,
+    "groupRadius": 6,
+    "cardRadius": 6
+  },
+  "texts": {
+    "windowTitle": "机器人",
+    "titleText": "机器人 UI 模板",
+    "statusMsg": "系统运行中",
+    "demoGroupTitle": "交互控件演示",
+    "hSliderLabel": "水平滑动条：",
+    "vSliderLabel": "垂直滑动条：",
+    "toggleLabel": "自定义开关：",
+    "check1Text": "选项 1",
+    "check2Text": "选项 2",
+    "comboLabel": "下拉选择：",
+    "tab1Title": "概览",
+    "tab2Title": "列表",
+    "tab1Content": "机械运转，精准高效",
+    "refreshBtnText": "刷新样式",
+    "fontName": "Consolas",
+    "loginTitle": "登录",
+    "loginIcon": "[USER]",
+    "settingsTitle": "设置",
+    "aboutTitle": "关于",
+    "cardTexts": [
+      "登录窗口",
+      "设置窗口",
+      "关于窗口",
+      "消息盒子"
+    ],
+    "comboItems": [
+      "选项 A",
+      "选项 B",
+      "选项 C",
+      "选项 D"
+    ],
+    "listItems": [
+      "项目 1",
+      "项目 2",
+      "项目 3",
+      "项目 4"
+    ],
+    "menuLabels": [
+      "文件",
+      "视图",
+      "帮助"
+    ]
+  },
+  "bgType": 23
+}

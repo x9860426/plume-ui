@@ -1,0 +1,337 @@
+{
+  "name": "夏天",
+  "colors": {
+    "bg1": [
+      77,
+      184,
+      255
+    ],
+    "bg2": [
+      135,
+      206,
+      235
+    ],
+    "bg3": [
+      255,
+      228,
+      181
+    ],
+    "bg4": [
+      245,
+      222,
+      179
+    ],
+    "text": [
+      44,
+      62,
+      80
+    ],
+    "title": [
+      255,
+      140,
+      66
+    ],
+    "accent": [
+      255,
+      140,
+      66
+    ],
+    "accent2": [
+      255,
+      179,
+      71
+    ],
+    "btnBg1": [
+      255,
+      179,
+      71
+    ],
+    "btnBg2": [
+      255,
+      140,
+      66
+    ],
+    "btnHover1": [
+      255,
+      200,
+      120
+    ],
+    "btnHover2": [
+      255,
+      179,
+      71
+    ],
+    "btnPressed": [
+      230,
+      115,
+      0
+    ],
+    "btnText": [
+      255,
+      255,
+      255
+    ],
+    "btnBorder": [
+      255,
+      166,
+      77
+    ],
+    "btnHoverBorder": [
+      255,
+      204,
+      128
+    ],
+    "inputBg": [
+      255,
+      255,
+      255
+    ],
+    "inputBorder": [
+      255,
+      140,
+      66
+    ],
+    "inputText": [
+      44,
+      62,
+      80
+    ],
+    "toggleOffBg": [
+      255,
+      224,
+      178
+    ],
+    "toggleOnBg": [
+      255,
+      183,
+      77
+    ],
+    "toggleOffBorder": [
+      255,
+      140,
+      66
+    ],
+    "toggleOnBorder": [
+      245,
+      124,
+      0
+    ],
+    "toggleOffSlider": [
+      255,
+      255,
+      255
+    ],
+    "toggleOnSlider": [
+      255,
+      255,
+      255
+    ],
+    "sliderGroove": [
+      255,
+      224,
+      178
+    ],
+    "sliderHandle": [
+      255,
+      140,
+      66
+    ],
+    "sliderHandleBorder": [
+      255,
+      179,
+      71
+    ],
+    "checkBorder": [
+      255,
+      140,
+      66
+    ],
+    "checkBg": [
+      255,
+      255,
+      255
+    ],
+    "checkCheckedBg": [
+      255,
+      179,
+      71
+    ],
+    "checkCheckedBorder": [
+      245,
+      124,
+      0
+    ],
+    "tabBg": [
+      255,
+      228,
+      181
+    ],
+    "tabSelBg": [
+      255,
+      179,
+      71
+    ],
+    "tabText": [
+      44,
+      62,
+      80
+    ],
+    "tabSelText": [
+      255,
+      255,
+      255
+    ],
+    "menuBg": [
+      245,
+      222,
+      179
+    ],
+    "menuText": [
+      44,
+      62,
+      80
+    ],
+    "menuSelBg": [
+      255,
+      179,
+      71
+    ],
+    "menuSelText": [
+      255,
+      255,
+      255
+    ],
+    "toolbarBg": [
+      255,
+      228,
+      181
+    ],
+    "toolbarHoverBg": [
+      255,
+      179,
+      71
+    ],
+    "statusBg": [
+      245,
+      222,
+      179
+    ],
+    "statusText": [
+      230,
+      81,
+      0
+    ],
+    "groupBorder": [
+      255,
+      140,
+      66
+    ],
+    "groupTitleBg": [
+      255,
+      255,
+      255
+    ],
+    "groupTitle": [
+      255,
+      140,
+      66
+    ],
+    "cardBg1": [
+      255,
+      179,
+      71
+    ],
+    "cardBg2": [
+      255,
+      140,
+      66
+    ],
+    "cardHoverBg1": [
+      255,
+      200,
+      120
+    ],
+    "cardHoverBg2": [
+      255,
+      179,
+      71
+    ],
+    "listBg": [
+      255,
+      255,
+      255
+    ],
+    "listBorder": [
+      255,
+      140,
+      66
+    ],
+    "listText": [
+      44,
+      62,
+      80
+    ],
+    "listSelBg": [
+      255,
+      179,
+      71
+    ],
+    "useGradient": true,
+    "antialias": true,
+    "btnRadius": 14,
+    "inputRadius": 12,
+    "toggleW": 56,
+    "toggleH": 30,
+    "toggleRadius": 14,
+    "toggleStyle": 3,
+    "checkRadius": 6,
+    "tabRadius": 14,
+    "groupRadius": 14,
+    "cardRadius": 14
+  },
+  "texts": {
+    "windowTitle": "夏天",
+    "titleText": "夏天 UI 模板",
+    "statusMsg": "阳光明媚",
+    "demoGroupTitle": "交互控件演示",
+    "hSliderLabel": "水平滑动条：",
+    "vSliderLabel": "垂直滑动条：",
+    "toggleLabel": "自定义开关：",
+    "check1Text": "选项 1",
+    "check2Text": "选项 2",
+    "comboLabel": "下拉选择：",
+    "tab1Title": "概览",
+    "tab2Title": "列表",
+    "tab1Content": "清凉夏日风格，蓝天与阳光",
+    "refreshBtnText": "刷新样式",
+    "fontName": "Segoe UI",
+    "loginTitle": "登录",
+    "loginIcon": "[USER]",
+    "settingsTitle": "设置",
+    "aboutTitle": "关于",
+    "cardTexts": [
+      "登录窗口",
+      "设置窗口",
+      "关于窗口",
+      "消息盒子"
+    ],
+    "comboItems": [
+      "选项 A",
+      "选项 B",
+      "选项 C",
+      "选项 D"
+    ],
+    "listItems": [
+      "项目 1",
+      "项目 2",
+      "项目 3",
+      "项目 4"
+    ],
+    "menuLabels": [
+      "文件",
+      "视图",
+      "帮助"
+    ]
+  },
+  "bgType": 14
+}

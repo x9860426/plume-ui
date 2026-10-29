@@ -1,0 +1,337 @@
+{
+  "name": "复古船",
+  "colors": {
+    "bg1": [
+      42,
+      10,
+      10
+    ],
+    "bg2": [
+      58,
+      20,
+      20
+    ],
+    "bg3": [
+      42,
+      10,
+      10
+    ],
+    "bg4": [
+      42,
+      10,
+      10
+    ],
+    "text": [
+      252,
+      234,
+      187
+    ],
+    "title": [
+      212,
+      160,
+      23
+    ],
+    "accent": [
+      212,
+      160,
+      23
+    ],
+    "accent2": [
+      204,
+      0,
+      0
+    ],
+    "btnBg1": [
+      204,
+      0,
+      0
+    ],
+    "btnBg2": [
+      139,
+      0,
+      0
+    ],
+    "btnHover1": [
+      230,
+      0,
+      0
+    ],
+    "btnHover2": [
+      165,
+      0,
+      0
+    ],
+    "btnPressed": [
+      102,
+      0,
+      0
+    ],
+    "btnText": [
+      255,
+      215,
+      0
+    ],
+    "btnBorder": [
+      212,
+      160,
+      23
+    ],
+    "btnHoverBorder": [
+      255,
+      215,
+      0
+    ],
+    "inputBg": [
+      30,
+      10,
+      10
+    ],
+    "inputBorder": [
+      212,
+      160,
+      23
+    ],
+    "inputText": [
+      252,
+      234,
+      187
+    ],
+    "toggleOffBg": [
+      74,
+      16,
+      16
+    ],
+    "toggleOnBg": [
+      204,
+      0,
+      0
+    ],
+    "toggleOffBorder": [
+      212,
+      160,
+      23
+    ],
+    "toggleOnBorder": [
+      255,
+      215,
+      0
+    ],
+    "toggleOffSlider": [
+      252,
+      234,
+      187
+    ],
+    "toggleOnSlider": [
+      255,
+      215,
+      0
+    ],
+    "sliderGroove": [
+      42,
+      10,
+      10
+    ],
+    "sliderHandle": [
+      212,
+      160,
+      23
+    ],
+    "sliderHandleBorder": [
+      255,
+      215,
+      0
+    ],
+    "checkBorder": [
+      212,
+      160,
+      23
+    ],
+    "checkBg": [
+      30,
+      10,
+      10
+    ],
+    "checkCheckedBg": [
+      204,
+      0,
+      0
+    ],
+    "checkCheckedBorder": [
+      139,
+      0,
+      0
+    ],
+    "tabBg": [
+      42,
+      10,
+      10
+    ],
+    "tabSelBg": [
+      204,
+      0,
+      0
+    ],
+    "tabText": [
+      252,
+      234,
+      187
+    ],
+    "tabSelText": [
+      255,
+      215,
+      0
+    ],
+    "menuBg": [
+      42,
+      10,
+      10
+    ],
+    "menuText": [
+      252,
+      234,
+      187
+    ],
+    "menuSelBg": [
+      204,
+      0,
+      0
+    ],
+    "menuSelText": [
+      255,
+      215,
+      0
+    ],
+    "toolbarBg": [
+      58,
+      20,
+      20
+    ],
+    "toolbarHoverBg": [
+      204,
+      0,
+      0
+    ],
+    "statusBg": [
+      42,
+      10,
+      10
+    ],
+    "statusText": [
+      212,
+      160,
+      23
+    ],
+    "groupBorder": [
+      212,
+      160,
+      23
+    ],
+    "groupTitleBg": [
+      42,
+      10,
+      10
+    ],
+    "groupTitle": [
+      212,
+      160,
+      23
+    ],
+    "cardBg1": [
+      204,
+      0,
+      0
+    ],
+    "cardBg2": [
+      139,
+      0,
+      0
+    ],
+    "cardHoverBg1": [
+      230,
+      0,
+      0
+    ],
+    "cardHoverBg2": [
+      165,
+      0,
+      0
+    ],
+    "listBg": [
+      30,
+      10,
+      10
+    ],
+    "listBorder": [
+      212,
+      160,
+      23
+    ],
+    "listText": [
+      252,
+      234,
+      187
+    ],
+    "listSelBg": [
+      204,
+      0,
+      0
+    ],
+    "useGradient": true,
+    "antialias": true,
+    "btnRadius": 8,
+    "inputRadius": 6,
+    "toggleW": 60,
+    "toggleH": 30,
+    "toggleRadius": 12,
+    "toggleStyle": 0,
+    "checkRadius": 4,
+    "tabRadius": 6,
+    "groupRadius": 8,
+    "cardRadius": 8
+  },
+  "texts": {
+    "windowTitle": "复古船",
+    "titleText": "复古船 UI 模板",
+    "statusMsg": "扬帆起航",
+    "demoGroupTitle": "交互控件演示",
+    "hSliderLabel": "水平滑动条：",
+    "vSliderLabel": "垂直滑动条：",
+    "toggleLabel": "自定义开关：",
+    "check1Text": "选项 1",
+    "check2Text": "选项 2",
+    "comboLabel": "下拉选择：",
+    "tab1Title": "概览",
+    "tab2Title": "列表",
+    "tab1Content": "复古航海风格，金色与深红交织",
+    "refreshBtnText": "刷新样式",
+    "fontName": "Georgia",
+    "loginTitle": "登录",
+    "loginIcon": "[USER]",
+    "settingsTitle": "设置",
+    "aboutTitle": "关于",
+    "cardTexts": [
+      "登录窗口",
+      "设置窗口",
+      "关于窗口",
+      "消息盒子"
+    ],
+    "comboItems": [
+      "选项 A",
+      "选项 B",
+      "选项 C",
+      "选项 D"
+    ],
+    "listItems": [
+      "项目 1",
+      "项目 2",
+      "项目 3",
+      "项目 4"
+    ],
+    "menuLabels": [
+      "文件",
+      "视图",
+      "帮助"
+    ]
+  },
+  "bgType": 13
+}

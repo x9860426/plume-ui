@@ -1,0 +1,337 @@
+{
+  "name": "狼人",
+  "colors": {
+    "bg1": [
+      26,
+      15,
+      10
+    ],
+    "bg2": [
+      45,
+      27,
+      19
+    ],
+    "bg3": [
+      26,
+      15,
+      10
+    ],
+    "bg4": [
+      26,
+      15,
+      10
+    ],
+    "text": [
+      224,
+      213,
+      192
+    ],
+    "title": [
+      139,
+      0,
+      0
+    ],
+    "accent": [
+      139,
+      0,
+      0
+    ],
+    "accent2": [
+      160,
+      82,
+      45
+    ],
+    "btnBg1": [
+      92,
+      26,
+      26
+    ],
+    "btnBg2": [
+      59,
+      15,
+      15
+    ],
+    "btnHover1": [
+      122,
+      36,
+      36
+    ],
+    "btnHover2": [
+      74,
+      21,
+      21
+    ],
+    "btnPressed": [
+      43,
+      11,
+      11
+    ],
+    "btnText": [
+      240,
+      230,
+      210
+    ],
+    "btnBorder": [
+      139,
+      0,
+      0
+    ],
+    "btnHoverBorder": [
+      192,
+      64,
+      64
+    ],
+    "inputBg": [
+      30,
+      15,
+      10
+    ],
+    "inputBorder": [
+      139,
+      0,
+      0
+    ],
+    "inputText": [
+      224,
+      213,
+      192
+    ],
+    "toggleOffBg": [
+      44,
+      26,
+      18
+    ],
+    "toggleOnBg": [
+      139,
+      0,
+      0
+    ],
+    "toggleOffBorder": [
+      139,
+      0,
+      0
+    ],
+    "toggleOnBorder": [
+      192,
+      64,
+      64
+    ],
+    "toggleOffSlider": [
+      224,
+      213,
+      192
+    ],
+    "toggleOnSlider": [
+      240,
+      230,
+      210
+    ],
+    "sliderGroove": [
+      44,
+      26,
+      18
+    ],
+    "sliderHandle": [
+      139,
+      0,
+      0
+    ],
+    "sliderHandleBorder": [
+      192,
+      64,
+      64
+    ],
+    "checkBorder": [
+      139,
+      0,
+      0
+    ],
+    "checkBg": [
+      30,
+      15,
+      10
+    ],
+    "checkCheckedBg": [
+      92,
+      26,
+      26
+    ],
+    "checkCheckedBorder": [
+      192,
+      64,
+      64
+    ],
+    "tabBg": [
+      45,
+      27,
+      19
+    ],
+    "tabSelBg": [
+      92,
+      26,
+      26
+    ],
+    "tabText": [
+      224,
+      213,
+      192
+    ],
+    "tabSelText": [
+      240,
+      230,
+      210
+    ],
+    "menuBg": [
+      26,
+      15,
+      10
+    ],
+    "menuText": [
+      224,
+      213,
+      192
+    ],
+    "menuSelBg": [
+      92,
+      26,
+      26
+    ],
+    "menuSelText": [
+      240,
+      230,
+      210
+    ],
+    "toolbarBg": [
+      45,
+      27,
+      19
+    ],
+    "toolbarHoverBg": [
+      92,
+      26,
+      26
+    ],
+    "statusBg": [
+      26,
+      15,
+      10
+    ],
+    "statusText": [
+      160,
+      82,
+      45
+    ],
+    "groupBorder": [
+      139,
+      0,
+      0
+    ],
+    "groupTitleBg": [
+      30,
+      15,
+      10
+    ],
+    "groupTitle": [
+      139,
+      0,
+      0
+    ],
+    "cardBg1": [
+      92,
+      26,
+      26
+    ],
+    "cardBg2": [
+      59,
+      15,
+      15
+    ],
+    "cardHoverBg1": [
+      122,
+      36,
+      36
+    ],
+    "cardHoverBg2": [
+      74,
+      21,
+      21
+    ],
+    "listBg": [
+      30,
+      15,
+      10
+    ],
+    "listBorder": [
+      139,
+      0,
+      0
+    ],
+    "listText": [
+      224,
+      213,
+      192
+    ],
+    "listSelBg": [
+      92,
+      26,
+      26
+    ],
+    "useGradient": true,
+    "antialias": true,
+    "btnRadius": 12,
+    "inputRadius": 10,
+    "toggleW": 60,
+    "toggleH": 32,
+    "toggleRadius": 14,
+    "toggleStyle": 4,
+    "checkRadius": 4,
+    "tabRadius": 12,
+    "groupRadius": 12,
+    "cardRadius": 12
+  },
+  "texts": {
+    "windowTitle": "狼人",
+    "titleText": "狼人 UI 模板",
+    "statusMsg": "月夜降临...",
+    "demoGroupTitle": "交互控件演示",
+    "hSliderLabel": "水平滑动条：",
+    "vSliderLabel": "垂直滑动条：",
+    "toggleLabel": "自定义开关：",
+    "check1Text": "选项 1",
+    "check2Text": "选项 2",
+    "comboLabel": "下拉选择：",
+    "tab1Title": "概览",
+    "tab2Title": "列表",
+    "tab1Content": "暗夜中的狼人，神秘而强大",
+    "refreshBtnText": "刷新样式",
+    "fontName": "Georgia",
+    "loginTitle": "登录",
+    "loginIcon": "[USER]",
+    "settingsTitle": "设置",
+    "aboutTitle": "关于",
+    "cardTexts": [
+      "登录窗口",
+      "设置窗口",
+      "关于窗口",
+      "消息盒子"
+    ],
+    "comboItems": [
+      "选项 A",
+      "选项 B",
+      "选项 C",
+      "选项 D"
+    ],
+    "listItems": [
+      "项目 1",
+      "项目 2",
+      "项目 3",
+      "项目 4"
+    ],
+    "menuLabels": [
+      "文件",
+      "视图",
+      "帮助"
+    ]
+  },
+  "bgType": 28
+}

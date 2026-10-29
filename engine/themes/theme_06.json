@@ -1,0 +1,337 @@
+{
+  "name": "吸血鬼古堡",
+  "colors": {
+    "bg1": [
+      10,
+      4,
+      4
+    ],
+    "bg2": [
+      26,
+      10,
+      12
+    ],
+    "bg3": [
+      10,
+      4,
+      4
+    ],
+    "bg4": [
+      10,
+      4,
+      4
+    ],
+    "text": [
+      212,
+      181,
+      176
+    ],
+    "title": [
+      160,
+      90,
+      44
+    ],
+    "accent": [
+      139,
+      26,
+      26
+    ],
+    "accent2": [
+      160,
+      90,
+      44
+    ],
+    "btnBg1": [
+      107,
+      16,
+      16
+    ],
+    "btnBg2": [
+      46,
+      5,
+      5
+    ],
+    "btnHover1": [
+      155,
+      24,
+      24
+    ],
+    "btnHover2": [
+      107,
+      16,
+      16
+    ],
+    "btnPressed": [
+      58,
+      8,
+      8
+    ],
+    "btnText": [
+      224,
+      192,
+      176
+    ],
+    "btnBorder": [
+      160,
+      90,
+      44
+    ],
+    "btnHoverBorder": [
+      192,
+      122,
+      74
+    ],
+    "inputBg": [
+      28,
+      14,
+      15
+    ],
+    "inputBorder": [
+      139,
+      26,
+      26
+    ],
+    "inputText": [
+      212,
+      181,
+      176
+    ],
+    "toggleOffBg": [
+      28,
+      14,
+      15
+    ],
+    "toggleOnBg": [
+      42,
+      8,
+      8
+    ],
+    "toggleOffBorder": [
+      139,
+      26,
+      26
+    ],
+    "toggleOnBorder": [
+      160,
+      90,
+      44
+    ],
+    "toggleOffSlider": [
+      92,
+      16,
+      16
+    ],
+    "toggleOnSlider": [
+      192,
+      57,
+      43
+    ],
+    "sliderGroove": [
+      28,
+      14,
+      15
+    ],
+    "sliderHandle": [
+      139,
+      26,
+      26
+    ],
+    "sliderHandleBorder": [
+      160,
+      90,
+      44
+    ],
+    "checkBorder": [
+      139,
+      26,
+      26
+    ],
+    "checkBg": [
+      28,
+      14,
+      15
+    ],
+    "checkCheckedBg": [
+      92,
+      16,
+      16
+    ],
+    "checkCheckedBorder": [
+      160,
+      90,
+      44
+    ],
+    "tabBg": [
+      42,
+      16,
+      18
+    ],
+    "tabSelBg": [
+      139,
+      26,
+      26
+    ],
+    "tabText": [
+      160,
+      90,
+      44
+    ],
+    "tabSelText": [
+      255,
+      255,
+      255
+    ],
+    "menuBg": [
+      10,
+      4,
+      4
+    ],
+    "menuText": [
+      160,
+      90,
+      44
+    ],
+    "menuSelBg": [
+      139,
+      26,
+      26
+    ],
+    "menuSelText": [
+      255,
+      255,
+      255
+    ],
+    "toolbarBg": [
+      20,
+      7,
+      8
+    ],
+    "toolbarHoverBg": [
+      139,
+      26,
+      26
+    ],
+    "statusBg": [
+      10,
+      4,
+      4
+    ],
+    "statusText": [
+      160,
+      90,
+      44
+    ],
+    "groupBorder": [
+      139,
+      26,
+      26
+    ],
+    "groupTitleBg": [
+      10,
+      4,
+      4
+    ],
+    "groupTitle": [
+      160,
+      90,
+      44
+    ],
+    "cardBg1": [
+      107,
+      16,
+      16
+    ],
+    "cardBg2": [
+      46,
+      5,
+      5
+    ],
+    "cardHoverBg1": [
+      155,
+      24,
+      24
+    ],
+    "cardHoverBg2": [
+      107,
+      16,
+      16
+    ],
+    "listBg": [
+      28,
+      14,
+      15
+    ],
+    "listBorder": [
+      139,
+      26,
+      26
+    ],
+    "listText": [
+      212,
+      181,
+      176
+    ],
+    "listSelBg": [
+      92,
+      16,
+      16
+    ],
+    "useGradient": true,
+    "antialias": true,
+    "btnRadius": 8,
+    "inputRadius": 8,
+    "toggleW": 60,
+    "toggleH": 32,
+    "toggleRadius": 10,
+    "toggleStyle": 4,
+    "checkRadius": 3,
+    "tabRadius": 6,
+    "groupRadius": 8,
+    "cardRadius": 8
+  },
+  "texts": {
+    "windowTitle": "吸血鬼古堡 暗夜贵族主题",
+    "titleText": "吸血鬼古堡 UI 模板",
+    "statusMsg": "暗夜降临，聆听血族的低语...",
+    "demoGroupTitle": "吸血鬼能力演示",
+    "hSliderLabel": "血之渴望 (水平)：",
+    "vSliderLabel": "暗夜之力 (垂直)：",
+    "toggleLabel": "化身蝙蝠：",
+    "check1Text": "夜视能力",
+    "check2Text": "催眠凝视",
+    "comboLabel": "血统分支：",
+    "tab1Title": "概览",
+    "tab2Title": "密室",
+    "tab1Content": "吸血鬼古堡主题，融合哥特式暗黑美学与血红贵族气息。",
+    "refreshBtnText": "刷新样式",
+    "fontName": "Georgia",
+    "loginTitle": "血族认证",
+    "loginIcon": "[BAT]",
+    "settingsTitle": "暗夜设置",
+    "aboutTitle": "关于血族",
+    "cardTexts": [
+      "血族认证",
+      "暗夜设置",
+      "关于血族",
+      "密语盒子"
+    ],
+    "comboItems": [
+      "纯血贵族",
+      "暗夜子民",
+      "混血种",
+      "血仆"
+    ],
+    "listItems": [
+      "血族档案",
+      "暗夜契约",
+      "古堡地图",
+      "血祭仪式"
+    ],
+    "menuLabels": [
+      "城堡",
+      "夜视",
+      "血族"
+    ]
+  },
+  "bgType": 6
+}

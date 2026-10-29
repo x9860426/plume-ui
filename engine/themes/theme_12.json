@@ -1,0 +1,337 @@
+{
+  "name": "塔罗牌",
+  "colors": {
+    "bg1": [
+      11,
+      11,
+      26
+    ],
+    "bg2": [
+      26,
+      16,
+      48
+    ],
+    "bg3": [
+      13,
+      13,
+      43
+    ],
+    "bg4": [
+      13,
+      13,
+      43
+    ],
+    "text": [
+      212,
+      197,
+      178
+    ],
+    "title": [
+      201,
+      165,
+      92
+    ],
+    "accent": [
+      201,
+      165,
+      92
+    ],
+    "accent2": [
+      74,
+      54,
+      114
+    ],
+    "btnBg1": [
+      42,
+      30,
+      74
+    ],
+    "btnBg2": [
+      26,
+      18,
+      48
+    ],
+    "btnHover1": [
+      58,
+      40,
+      94
+    ],
+    "btnHover2": [
+      40,
+      31,
+      64
+    ],
+    "btnPressed": [
+      26,
+      18,
+      48
+    ],
+    "btnText": [
+      232,
+      220,
+      200
+    ],
+    "btnBorder": [
+      201,
+      165,
+      92
+    ],
+    "btnHoverBorder": [
+      219,
+      185,
+      106
+    ],
+    "inputBg": [
+      20,
+      15,
+      40
+    ],
+    "inputBorder": [
+      201,
+      165,
+      92
+    ],
+    "inputText": [
+      232,
+      220,
+      200
+    ],
+    "toggleOffBg": [
+      26,
+      16,
+      48
+    ],
+    "toggleOnBg": [
+      94,
+      58,
+      122
+    ],
+    "toggleOffBorder": [
+      201,
+      165,
+      92
+    ],
+    "toggleOnBorder": [
+      219,
+      185,
+      106
+    ],
+    "toggleOffSlider": [
+      212,
+      197,
+      178
+    ],
+    "toggleOnSlider": [
+      232,
+      220,
+      200
+    ],
+    "sliderGroove": [
+      26,
+      16,
+      48
+    ],
+    "sliderHandle": [
+      201,
+      165,
+      92
+    ],
+    "sliderHandleBorder": [
+      219,
+      185,
+      106
+    ],
+    "checkBorder": [
+      201,
+      165,
+      92
+    ],
+    "checkBg": [
+      20,
+      15,
+      40
+    ],
+    "checkCheckedBg": [
+      74,
+      54,
+      114
+    ],
+    "checkCheckedBorder": [
+      219,
+      185,
+      106
+    ],
+    "tabBg": [
+      26,
+      16,
+      48
+    ],
+    "tabSelBg": [
+      42,
+      30,
+      74
+    ],
+    "tabText": [
+      212,
+      197,
+      178
+    ],
+    "tabSelText": [
+      232,
+      220,
+      200
+    ],
+    "menuBg": [
+      11,
+      11,
+      26
+    ],
+    "menuText": [
+      212,
+      197,
+      178
+    ],
+    "menuSelBg": [
+      42,
+      30,
+      74
+    ],
+    "menuSelText": [
+      232,
+      220,
+      200
+    ],
+    "toolbarBg": [
+      13,
+      13,
+      43
+    ],
+    "toolbarHoverBg": [
+      42,
+      30,
+      74
+    ],
+    "statusBg": [
+      11,
+      11,
+      26
+    ],
+    "statusText": [
+      201,
+      165,
+      92
+    ],
+    "groupBorder": [
+      201,
+      165,
+      92
+    ],
+    "groupTitleBg": [
+      20,
+      15,
+      40
+    ],
+    "groupTitle": [
+      219,
+      185,
+      106
+    ],
+    "cardBg1": [
+      42,
+      30,
+      74
+    ],
+    "cardBg2": [
+      26,
+      18,
+      48
+    ],
+    "cardHoverBg1": [
+      58,
+      40,
+      94
+    ],
+    "cardHoverBg2": [
+      40,
+      31,
+      64
+    ],
+    "listBg": [
+      20,
+      15,
+      40
+    ],
+    "listBorder": [
+      201,
+      165,
+      92
+    ],
+    "listText": [
+      232,
+      220,
+      200
+    ],
+    "listSelBg": [
+      74,
+      54,
+      114
+    ],
+    "useGradient": true,
+    "antialias": true,
+    "btnRadius": 12,
+    "inputRadius": 10,
+    "toggleW": 60,
+    "toggleH": 32,
+    "toggleRadius": 14,
+    "toggleStyle": 0,
+    "checkRadius": 4,
+    "tabRadius": 10,
+    "groupRadius": 12,
+    "cardRadius": 12
+  },
+  "texts": {
+    "windowTitle": "塔罗牌",
+    "titleText": "塔罗牌 UI 模板",
+    "statusMsg": "命运之牌已揭示",
+    "demoGroupTitle": "交互控件演示",
+    "hSliderLabel": "水平滑动条：",
+    "vSliderLabel": "垂直滑动条：",
+    "toggleLabel": "自定义开关：",
+    "check1Text": "选项 1",
+    "check2Text": "选项 2",
+    "comboLabel": "下拉选择：",
+    "tab1Title": "概览",
+    "tab2Title": "列表",
+    "tab1Content": "神秘塔罗牌风格，预示命运",
+    "refreshBtnText": "刷新样式",
+    "fontName": "Georgia",
+    "loginTitle": "登录",
+    "loginIcon": "[USER]",
+    "settingsTitle": "设置",
+    "aboutTitle": "关于",
+    "cardTexts": [
+      "登录窗口",
+      "设置窗口",
+      "关于窗口",
+      "消息盒子"
+    ],
+    "comboItems": [
+      "选项 A",
+      "选项 B",
+      "选项 C",
+      "选项 D"
+    ],
+    "listItems": [
+      "项目 1",
+      "项目 2",
+      "项目 3",
+      "项目 4"
+    ],
+    "menuLabels": [
+      "文件",
+      "视图",
+      "帮助"
+    ]
+  },
+  "bgType": 12
+}
