@@ -1,44 +1,72 @@
-# 999研究UI — C++ UI 引擎
+# Plume UI — C++ 主引擎
 
-一套研究型 C++ UI 引擎，**主引擎负责计算/事件/输入**，**UI 引擎负责渲染**，支持 **双渲染后端（OpenGL / Vulkan）** 与 **外部 TTF 字体**。
-
-## 目录结构
-
-```
-src/
-├── core/        主引擎：Math/Log/Event/Input/Engine（计算与处理）
-├── render/      渲染抽象层 + 后端
-│   ├── RenderTypes.h / RenderDevice.h   抽象接口
-│   ├── gl/      OpenGL 3.3 后端（完整可用）
-│   └── vk/      Vulkan 后端（骨架，需 Vulkan SDK）
-├── platform/    窗口与系统事件（GLFW）
-├── ui/          UI 引擎：Font/Element/Text/Button/UIEngine
-└── main.cpp     示例：双后端切换 + 文字 + 可点击按钮
-```
+Plume UI 的 C++ 引擎线（`engine/`）。项目总览、特性、模板编号体系与授权说明见仓库根目录 [README](../README.md)，本文件只讲引擎的构建、运行与工程约定。
 
 ## 构建
 
-```bash
-cmake -B build -S . -DUIENGINE_BUILD_VULKAN=ON
-cmake --build build --config Release
+依赖：CMake ≥ 3.16、C++17 编译器（MinGW-w64 / MSVC 均可）。第三方依赖经 `DEPS_CACHE` 离线目录接入（需包含 `glfw-src` / `stb-src` / `nlohmann_json-src` 三个源码目录），glad 已随 `third_party/` 附带。Vulkan 未装 SDK 时自动降级为 stub，仅 OpenGL 可用。
+
+```powershell
+cmake -G Ninja -S engine -B build/engine `
+      -DCMAKE_BUILD_TYPE=Release `
+      -DDEPS_CACHE=E:/工作区/_deps_cache
+cmake --build build/engine
 ```
 
-依赖通过 CMake `FetchContent` 自动拉取：GLFW、glad、stb。Vulkan 需本机安装 [Vulkan SDK](https://vulkan.lunarg.com/)；未安装时自动降级为 stub，仅 OpenGL 可用。
+MSVC 命令行构建：
 
-## 外部字体
-
-把任意 `.ttf` 放到 `assets/fonts/`，示例默认加载 `assets/fonts/font.ttf`。字符集按需生成位图图集上传 GPU。
+```powershell
+cmake -S engine -B build/engine -DDEPS_CACHE=E:/工作区/_deps_cache
+cmake --build build/engine --config Release
+```
 
 ## 运行
 
-```bash
-build/Release/uiengine_demo.exe        # 默认 OpenGL
-build/Release/uiengine_demo.exe --vk   # 尝试 Vulkan
+```powershell
+build/engine/uiengine_demo.exe                      # 默认 OpenGL
+build/engine/uiengine_demo.exe --vk                 # 尝试 Vulkan
+build/engine/uiengine_demo.exe --open theme_studio --shot demo   # 启动即开悬浮窗 + 引擎内自动截图
 ```
 
-## 架构要点
+常用参数：`--apps N`（初始应用数）、`--threads 0..3`（线程模式）、`--framemode 0/1`（系统边框/完全自绘）、`--hidebar`（全屏隐藏顶栏）、`--winsize WxH`（强制逻辑尺寸）、`--open <configId>`、`--shot <tag>` / `--shotdelay N`、`--switchafter S:m1[:m2]`、`--frametoggleafter S`、`--fsafter S`。完整表格见根 README。
 
-- `RenderDevice` 为唯一渲染抽象，UI 层只产生 `Vertex/索引/纹理` 命令，与后端解耦。
-- `Engine` 持有 `Window + RenderDevice + UIEngine`，主循环驱动事件分发 → 输入更新 → UI 布局 → 渲染 → present。
-- `Font` 用 `stb_truetype` 从外部 TTF 生成 atlas 纹理，按字符返回 UV/尺寸，UI 文本逐字形拼 quad。
-- 双后端可在运行时通过命令行参数切换，无需重编译。
+## 热键（应用级键路由表）
+
+| 键 | 动作 |
+|---|---|
+| F1 | 重置视觉参数（main 页） |
+| F2 | 运行时切渲染后端（OpenGL ⇄ Vulkan） |
+| F3 | 循环切换主题 |
+| F4 | 新建应用窗口 |
+| F11 | 全屏切换 |
+| Esc | 关闭栈顶悬浮窗 |
+
+## 目录结构
+
+```text
+engine/
+├── CMakeLists.txt
+├── src/
+│   ├── main.cpp            多应用主循环 + 命令行入口
+│   ├── app/                多应用窗口 / 内容处理器 / 键路由建表
+│   ├── core/               Math / Log / Event / Input / Assets
+│   ├── platform/           GLFW 窗口封装
+│   ├── render/             RenderDevice 抽象 + gl/ + vk/ + 多线程调度
+│   └── ui/                 MainUI 框架 + page/ 页面系统 + win/ 悬浮窗系统
+├── themes/                 主题 JSON（启动热加载）
+├── assets/                 字体等资源
+├── shaders/                UI 着色器（GLSL + SPIR-V）
+└── third_party/            glad 离线生成
+```
+
+## 工程约定（改代码前必读）
+
+- **单位契约**（`ui/win/UiContext.h` 顶部）：`scale` 是逻辑像素 → 屏幕像素唯一换算因子；`WindowInstance.x/y/w/h` 为屏幕像素；`WindowConfig` 尺寸字段为逻辑像素；`RegionRequest`/扩展绘制为屏幕绝对坐标；页面布局基准缩放取 `pageScale(h)` 单源。
+- **系统派发**：滚动/裁剪/滚动条/下拉/分割/沙盘/热键集中在各 `*System` 模块，扩展代码只声明、不自绘自判。
+- **模板编号**：控件绘制一律带 `tpl` 尾参（0=跟随全局，1=系统默认，2..N=内置变体），注册表单源在 `ui/win/StyleTpl.h`，新增模板只加常量不改旧号。
+- **生命周期**：窗口创建/销毁/切后端/切线程模式前必须 `ThreadScheduler::pause()`（排空管线），操作完 `resume()`；OpenGL 强制单线程，Vulkan 可多线程。
+- 引擎内 `*.md`（记忆/升级清单/同步清单）为开发过程文档，记录每次引擎级修复与两侧同步状态，改动公共文件后建议跑一次差异审计。
+
+## 状态
+
+当前引擎源码与主引擎工作目录 `988-27.0` 同步（89 个源文件），构建验证：Release/Debug 零错误零警告，`--shot` 冒烟正常。
