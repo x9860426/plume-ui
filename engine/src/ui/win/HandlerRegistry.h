@@ -26,6 +26,12 @@ using WinReleaseFunc = void(*)(WindowInstance& win, const Vec2& m);
 // 返回 true = 已消费（不穿透到主界面/区域系统）
 using WinWheelFunc  = bool(*)(WindowInstance& win, const Vec2& m, float delta);
 
+// 【必须成对注册 drag + release 的场景】
+//   内容里有滑条 / 色板 / SV 区 / 可拖拽分割线等"按下后继续拖动"的控件：
+//   只注册 click 会出现「点一下能改值、按住拖动没反应」。系统只有在 click
+//   返回 true（命中并消费）后才把后续鼠标移动转发给 drag，松手转发给
+//   release；缺 release 则拖拽标志无法复位（下一次移动会继续改值）。
+//   纯按钮/列表类窗口只需 render + click + hover。
 struct WinHandler {
     WinRenderFunc  render = nullptr;
     WinClickFunc   click = nullptr;

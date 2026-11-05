@@ -33,6 +33,8 @@ struct AppContentHandler {
     void (*update)(AppWindow* app, Input& in);       // 逻辑更新（含悬浮窗输入路由）
     void (*render)(AppWindow* app, RenderDevice* dev); // 绘制内容（含悬浮窗帧尾时序）
     void (*collectText)(AppWindow* app, std::string& out); // 字体图集预热
+    // 热键不再由内容页声明：统一注册表见 AppWindow::buildKeyBindings /
+    // KeyRouter.h（每行带作用域：全局 / 指定 1 底 / 限制 N 底）。
 };
 
 // ---- 内容处理器注册表（进程全局，跨应用共享） ----

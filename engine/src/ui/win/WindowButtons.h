@@ -26,6 +26,12 @@ Rect fixSizeBtnRect(const WindowInstance& win);   // 固定大小
 Rect collapseBtnRect(const WindowInstance& win);  // 折叠
 Rect resizeGripRect(const WindowInstance& win);   // 右下角缩放手柄
 
+// ====== 右上角按钮区安全宽度（扩展内容避让的唯一来源） ======
+// 返回右侧按钮列实际占宽（右边距 + 各按钮 + 间距）。窗口内容要把控件/
+// 按钮排到标题行右侧时，右边界必须用 win.x + win.w - rightButtonsWidth()，
+// 否则会被关闭键压住（历史上扩展内容被 X 遮挡即此因）。按钮增减自动跟随。
+float rightButtonsWidth(const WindowInstance& win);
+
 // ====== hover 态更新（系统每帧调用，flags 过滤） ======
 void updateHover(WindowInstance& win, const Vec2& m);
 

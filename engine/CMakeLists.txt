@@ -1,4 +1,4 @@
-# AI生成
+# AI鐢熸垚
 cmake_minimum_required(VERSION 3.16)
 project(uiengine LANGUAGES C CXX)
 
@@ -9,24 +9,24 @@ set(CMAKE_CXX_EXTENSIONS OFF)
 option(UIENGINE_BUILD_VULKAN "Build Vulkan backend (requires Vulkan SDK)" ON)
 
 # ============================================================
-# 第三方依赖：离线复用 py 版 FetchContent 缓存（网络不通）
-# 缓存含 glfw-src / stb-src / nlohmann_json-src 完整源码
-# glad 产物已复制到 third_party/glad/（离线生成的 gl.c + glad/gl.h）
+# 绗笁鏂逛緷璧栵細绂荤嚎澶嶇敤 py 鐗?FetchContent 缂撳瓨锛堢綉缁滀笉閫氾級
+# 缂撳瓨鍚?glfw-src / stb-src / nlohmann_json-src 瀹屾暣婧愮爜
+# glad 浜х墿宸插鍒跺埌 third_party/glad/锛堢绾跨敓鎴愮殑 gl.c + glad/gl.h锛?
 # ============================================================
 set(DEPS_CACHE "${CMAKE_CURRENT_SOURCE_DIR}/third_party" CACHE PATH "Third-party deps cache")
 
-# ---- GLFW（本地源码 add_subdirectory）----
+# ---- GLFW锛堟湰鍦版簮鐮?add_subdirectory锛?---
 set(GLFW_BUILD_DOCS    OFF CACHE BOOL "" FORCE)
 set(GLFW_BUILD_TESTS   OFF CACHE BOOL "" FORCE)
 set(GLFW_BUILD_EXAMPLES OFF CACHE BOOL "" FORCE)
 set(GLFW_INSTALL       OFF CACHE BOOL "" FORCE)
 add_subdirectory(${DEPS_CACHE}/glfw-src ${CMAKE_BINARY_DIR}/glfw-build EXCLUDE_FROM_ALL)
 
-# ---- glad2（离线生成的 gl:core=3.3 加载器）----
+# ---- glad2锛堢绾跨敓鎴愮殑 gl:core=3.3 鍔犺浇鍣級----
 add_library(glad_gl_core STATIC third_party/glad/src/gl.c)
 target_include_directories(glad_gl_core PUBLIC third_party/glad/include)
 
-# ---- stb / nlohmann::json（header-only，仅 include 路径）----
+# ---- stb / nlohmann::json锛坔eader-only锛屼粎 include 璺緞锛?---
 
 set(UIENGINE_SOURCES
     src/app/AppContent.cpp
@@ -55,6 +55,8 @@ set(UIENGINE_SOURCES
     src/ui/page/Pages_Splitter.cpp
     src/ui/win/DropdownSystem.cpp
     src/ui/win/HandlerRegistry.cpp
+    src/ui/win/ImageSystem.cpp
+    src/ui/win/KeyRouter.cpp
     src/ui/win/LayerStack.cpp
     src/ui/win/RegionSystem.cpp
     src/ui/win/SandboxSystem.cpp

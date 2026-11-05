@@ -97,6 +97,13 @@ private:
     // 旧字形 UV 不变（不动已 pack 矩形）。
     stbtt_pack_context pc_ = {};          // 活态 pack 上下文（pcAlive_ 才有效）
     bool pcAlive_ = false;                // PackBegin 成功且未 PackEnd
+    // ---- 图集满保护（防每帧全量重建）----
+    // 症状：高 DPI / 大分辨率下字集扩到 4096² 后仍有字形放不下，旧逻辑每帧
+    // 走一次全量 rebuildAtlas（16M 像素 pack + RGBA 转换）→ 每帧数百 ms 尖峰。
+    // 策略：放不下的码点进 failedCps_（不再触发重建、日志只报一次）；全量
+    // 重建在最大尺寸失败后置 atlasFull_，后续新字形直接丢弃，不再尝试扩容。
+    std::unordered_set<uint32_t> failedCps_;   // 图集满时被丢弃的码点
+    bool atlasFull_ = false;                   // 4096² 仍放不下 → 停止扩容尝试
     std::vector<uint8_t> mono_;           // 图集单声道像素（pc_.pixels 指向此处）
     std::vector<uint8_t> rgba_;           // 上传缓冲（mono→RGBA，复用不重分配）
     std::vector<stbtt_packedchar> packed_;  // 全部已 pack 字形（与 packedCps_ 同序）

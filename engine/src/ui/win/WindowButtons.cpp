@@ -54,6 +54,18 @@ static Rect layoutBtn(const WindowInstance& win, BtnKind kind) {
     return Rect(Vec2(x, y), Vec2(bs, bs));  // 兜底（kind 必在序列中）
 }
 
+float rightButtonsWidth(const WindowInstance& win) {
+    float bs = btnSize(win), gap = btnGap();
+    int n = 0;
+    if (win.hasClose())      n++;
+    if (win.hasFloatBall())  n++;
+    if (win.hasPinTop())     n++;
+    if (win.hasFixSize())    n++;
+    if (win.hasCollapse())   n++;
+    if (n == 0) return rightMargin();
+    return rightMargin() + bs * (float)n + gap * (float)(n - 1);
+}
+
 Rect closeBtnRect(const WindowInstance& win)     { return layoutBtn(win, BtnKind::Close); }
 Rect floatBallBtnRect(const WindowInstance& win) { return layoutBtn(win, BtnKind::Ball); }
 Rect pinTopBtnRect(const WindowInstance& win)    { return layoutBtn(win, BtnKind::Pin); }

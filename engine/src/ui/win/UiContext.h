@@ -13,6 +13,14 @@
 //   ShadowAlpha() = (15 + 1×15)/255 × 强度        （叠层阴影基准透明度）
 //   RadiusScale() = 0.7 + 1×0.3 = 1.0 × 圆润强度  （所有圆角 = 基准值 × 该系数）
 // ============================================================
+// ---- 单位契约（全引擎唯一约定，改代码前先读这一段）----
+//   scale           : 逻辑像素 → 屏幕像素的倍率（唯一换算因子）
+//   winW / winH     : 画布尺寸（屏幕像素）
+//   WindowInstance.x/y/w/h   : 屏幕像素（绘制与命中同用，禁止当逻辑像素累加）
+//   WindowConfig 的 x/y/w/h  : 逻辑像素（建窗时经 scale 换算成屏幕像素）
+//   RegionRequest / 扩展绘制 : 屏幕绝对坐标（系统不做 scale 换算）
+//   pageScale(h)    : 页面布局基准缩放单源（逻辑高/600 × 用户页面缩放）
+//   违反契约的典型症状：缩放后右列控件飘出窗口、滚动条压住控件。
 #include "WinCommon.h"
 #include "../../app/AppFwd.h"
 
@@ -48,7 +56,7 @@ struct UiContext {
     int   ballStyle = 0;              // 悬浮球绘制（内部 0基渲染值：0=默认圆形 1=方形（圆角随 radiusScale）2..3=「特别绘制」2 模板）
                                       // 3..4 = 「特别绘制」2 模板（游戏ID 3..4：玻璃/渐变）
                                       // 游戏ID：0=跟随 1=系统默认（圆形）2=方形 3..4 对应上列；见 StyleTpl.h ball
-    int   scrollbarStyle = 0;         // 滚动条绘制模板（内部 0 基渲染值：0=系统默认细轨 1=胶囊·带上下按钮 2=胶囊·无按钮；
+    int   scrollbarStyle = 2;         // 滚动条绘制模板（默认 2=胶囊·无按钮，全引擎滚动条统一观感；1=胶囊带按钮；0=细轨）
                                       // 游戏ID：0=系统跟随 1=系统默认 2=胶囊带按钮 3=胶囊无按钮，见 StyleTpl.h scrollbar；
                                       // RegionSystem 按此单源取轨道宽度/按钮，并据此为内容自动让位 contentW）
     int   btnStyle = 0;               // 按钮绘制模板（内部 0基渲染值：0=系统默认 1=方形 2=圆润）
@@ -111,17 +119,11 @@ struct UiContext {
     // 随应用快照迁移；一开一关即时生效（AppWindow 每帧同步 appTitleBarH）。
     bool fullscreenHideBar = false;
 
-    // ---- 快捷键开关位掩码（默认全开 = 现行为不变） ----
-    // 按需清位 = 对应快捷键失效（嵌入场景保留部分键给宿主时用；
-    // MainUI 与 AppWindow 统一查此单源）
-    enum HotkeyBits : uint32_t {
-        HOTKEY_F1_RESET       = 1u << 0,   // F1 重置视觉参数（MainUI 判定）
-        HOTKEY_F2_BACKEND     = 1u << 1,   // F2 切渲染后端（AppWindow 判定）
-        HOTKEY_F3_THEME       = 1u << 2,   // F3 切主题（MainUI 判定）
-        HOTKEY_F4_NEW_APP     = 1u << 3,   // F4 新应用窗口（AppWindow 判定）
-        HOTKEY_F11_FULLSCREEN = 1u << 4,   // F11 全屏切换（AppWindow 判定）
-    };
-    uint32_t hotkeyMask = 0xFFFFFFFFu;
+    // 快捷键开关位掩码（hotkeyMask / HotkeyBits）已废除：热键收编进键
+    // 路由系统（KeyRouter），键与作用域随键表声明（内容页 keyTable /
+    // 应用级 buildAppKeys），判定单点在 AppWindow::frame——嵌入场景要
+    // 关某个键，清对应键表条目即可，不再需要开关位。
+
     bool  rememberLayout = false;     // 悬浮窗布局记忆总开关（默认关：启动不恢复、退出不保存，悬浮窗统统默认关闭；
                                       // 仅代码显式开启时 layout.json 读写生效——重启后自动开窗属极少需求）
 
@@ -149,6 +151,14 @@ struct UiContext {
     float shadowAlpha()  const { return (30.0f / 255.0f) * shadowStrength; }
     // 圆角系数：中档基准 1.0 × 圆润强度，所有圆角 = 基准值 × 该系数
     float radiusScale()  const { return radiusScaleUser; }
+    // 页面基准缩放：逻辑高/600（下限 0.5）× 用户页面缩放倍率。
+    // 页面布局（MainUI/各内容页）统一取此单源；快照重启时用旧尺寸调用
+    // 一次即得旧 scale（悬浮窗 rescale 基准），禁止各处手写同一公式。
+    float pageScale(int h) const {
+        float base = (float)h / 600.0f;
+        if (base < 0.5f) base = 0.5f;
+        return base * uiScaleUser;
+    }
 };
 
 // 旧全局单例 g_uiCtx：多应用架构后由 AppFwd.h 宏转发到当前应用的

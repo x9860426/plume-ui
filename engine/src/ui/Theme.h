@@ -93,6 +93,11 @@ extern ThemeData g_themes[THEME_COUNT];
 extern ThemeColors g_defaultThemeColors[THEME_COUNT];
 extern int g_currentTheme;
 
+// 主题循环切换单源：环形取模改 g_currentTheme，返回新主题名（可空）。
+// 读单源，故一次赋值即全引擎（背景/控件/悬浮窗）同步生效。
+// 快捷键、按钮、下拉等任何入口都必须调它，禁止各自写 `(i+1)%COUNT`。
+const char* cycleTheme(int delta = 1);
+
 inline ThemeData& currentTheme() { return g_themes[g_currentTheme]; }
 inline ThemeColors& currentColors() { return g_themes[g_currentTheme].colors; }
 inline ThemeTexts& currentTexts() { return g_themes[g_currentTheme].texts; }

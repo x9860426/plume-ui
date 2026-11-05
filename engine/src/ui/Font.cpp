@@ -85,6 +85,8 @@ bool Font::init(RenderDevice* dev) {
     if (!ttf_ || ttf_->empty()) { UI_LOG_ERROR("font: no ttf data"); return false; }
     dev_ = dev;
     bakedCps_.clear();
+    failedCps_.clear();
+    atlasFull_ = false;
     for (uint32_t c = 32; c < 127; ++c) bakedCps_.insert(c);
     return rebuildAtlas(dev);
 }
@@ -93,6 +95,9 @@ bool Font::rebake(RenderDevice* dev, float pixelHeight) {
     if (!ttf_ || ttf_->empty() || !dev || pixelHeight <= 0.f) return false;
     if (pixelHeight == pixelHeight_) return true;   // 同字号幂等（无谓重建省 pack+上传）
     pixelHeight_ = pixelHeight;
+    // 换密度后容量需求随之变化：清「放不下」标记，允许重新尝试扩容
+    failedCps_.clear();
+    atlasFull_ = false;
     // bakedCps_ 原样保留（含 ensureGlyphs 动态加入的中文字符）：
     // 仅换 raster 密度重新 pack，字集不丢
     return rebuildAtlas(dev);
@@ -114,6 +119,8 @@ bool Font::ensureGlyphs(RenderDevice* dev, const char* utf8Text) {
     while (s < e) {
         uint32_t cp = decodeUtf8(s, e);
         if (!cp) break;
+        // 已知放不下的码点直接跳过：否则每帧都会为它触发一次全量重建
+        if (failedCps_.find(cp) != failedCps_.end()) continue;
         if (bakedCps_.find(cp) == bakedCps_.end()) {
             bakedCps_.insert(cp);
             newCps.push_back(cp);
@@ -177,7 +184,20 @@ bool Font::ensureGlyphs(RenderDevice* dev, const char* utf8Text) {
         stbtt_PackEnd(&pc_); pcAlive_ = false;
         // 回落前把 newCps 留在 bakedCps_（全量会 pack 它们）
     }
-    return rebuildAtlas(dev);
+    // 丢弃本批新码点：从字集撤销（否则下帧仍算「未烘焙」）+ 记入失败集，
+    // 避免同一批字反复触发全量重建（高 DPI 下每次数百 ms）
+    auto dropNewCps = [&]() {
+        for (uint32_t cp : newCps) {
+            bakedCps_.erase(cp);
+            failedCps_.insert(cp);
+        }
+        UI_LOG_WARN("font: %zu glyphs dropped (atlas %dx%d full, further retries suppressed)",
+                    newCps.size(), atlasW_, atlasH_);
+    };
+    // 容量已到上限且上次仍失败 → 直接放弃本批，不再做无意义的全量 pack
+    if (atlasFull_) { dropNewCps(); return false; }
+    if (!rebuildAtlas(dev)) { dropNewCps(); return false; }
+    return true;
 }
 
 bool Font::rebuildAtlas(RenderDevice* dev) {
@@ -245,7 +265,10 @@ bool Font::rebuildAtlas(RenderDevice* dev) {
 
     if (!ok) {
         if (pcAlive_) { stbtt_PackEnd(&pc_); pcAlive_ = false; }
-        UI_LOG_ERROR("font: atlas too small even at %dx%d for %zu glyphs",
+        // 到最大尺寸仍放不下：标记「图集已满」，后续新字形不再尝试扩容
+        // （否则每帧全量 4096² pack 会造成数百 ms 卡顿）
+        atlasFull_ = true;
+        UI_LOG_ERROR("font: atlas too small even at %dx%d for %zu glyphs (growth disabled)",
                      atlasW, atlasH, cps.size());
         return false;
     }
@@ -261,6 +284,7 @@ bool Font::rebuildAtlas(RenderDevice* dev) {
         p.advance = x;
         glyphs_[uint32_t(cps[i])] = p;
     }
+    atlasFull_ = false;
     baked_ = true;
     UI_LOG_INFO("font atlas rebuilt: %zu glyphs, %dx%d, tex=%u",
                 cps.size(), atlasW_, atlasH_, texId_);

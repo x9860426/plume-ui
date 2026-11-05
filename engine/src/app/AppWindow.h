@@ -62,6 +62,7 @@
 #include "../ui/win/DropdownSystem.h"
 #include "../ui/win/SplitterSystem.h"
 #include "../ui/win/SandboxSystem.h"
+#include "../ui/win/KeyRouter.h"
 #include "AppContent.h"
 #include <chrono>
 #include <memory>
@@ -125,6 +126,7 @@ public:
     DropdownSystem dropdowns;   // 下拉选择系统（系统派发：全引擎下拉唯一实现）
     SplitterSystem splitters;   // 分割器系统（系统派发：全引擎分割条唯一实现）
     SandboxSystem sandboxes;    // 沙盘系统（系统派发：可平移可缩放无限画布）
+    KeyRouter      keys;        // 键路由（系统派发：热键唯一实现，见 KeyRouter.h）
 
     // ---- 帧驱动（内部：设置 currentApp → 泵事件 → update → render） ----
     void frame();
@@ -213,6 +215,12 @@ private:
     std::unique_ptr<Font> font_, smallFont_, bigFont_;
     const AppContentHandler* content_ = nullptr;  // 内容处理器（默认 "main"）
     void* contentData_ = nullptr;                 // 处理器私有视图实例
+    // 统一键注册表（唯一键表）：每行 = 一个键 + 作用域 + 动作。
+    // 作用域三档都是同一字段：KSCOPE_ALL（全局）/ KSCOPE_ONLY + 白名单
+    // （1 个底或 N 个底）。想全局就登记全局档并写 reason；想换作用域，
+    // 只改这一行数据，不改判定代码、不往各内容页抄表。
+    std::vector<KeyBinding> keyBindings_;
+    void buildKeyBindings();                          // 建表一次（createApp 内调用）
     std::string title_;
 
     // 主子级属性（-1 = 无父；false = 禁悬浮窗）

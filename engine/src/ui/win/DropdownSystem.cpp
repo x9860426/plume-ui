@@ -12,7 +12,9 @@
 #include "StyleTpl.h"             // tpl::internalOf（「下拉按钮」游戏ID 单源分派）
 #include "../Element.h"
 #include "../Theme.h"
+#include "../../core/Log.h"
 #include <algorithm>
+#include <cstdio>
 
 namespace ui {
 
@@ -22,12 +24,12 @@ static constexpr float kRadius     = 4.0f;   // 按钮/列表圆角
 static constexpr float kBtnBorderW = 1.0f;   // 按钮边框线宽
 static constexpr float kArrowOffX  = 12.0f;  // 箭头距按钮右边的偏移
 static constexpr float kTextPadX   = 8.0f;   // 按钮文字左内边距
-static constexpr float kTextPadY   = 2.0f;   // 按钮文字上内边距
 static constexpr float kItemPadX   = 6.0f;   // 列表项文字左内边距
 static constexpr float kClipInset  = 2.0f;   // 列表裁剪内缩（避圆角）
 static constexpr float kScrollbarW = 3.0f;   // 迷你滚动条宽度
 static constexpr float kScrollbarPad = 3.0f; // 迷你滚动条轨道内边距
 static constexpr int   kMaxVisible = 5;      // 下拉列表一次最多显示项数（超出滚动）
+
 
 DropdownState* DropdownSystem::findOrCreate(WindowInstance& win, const char* id) {
     for (auto& d : items_) {
@@ -74,7 +76,21 @@ void DropdownSystem::layoutList(DropdownState& st, const DropdownRequest& req) {
 bool DropdownSystem::draw(RenderDevice* dev, WindowInstance& win,
                           const DropdownRequest& req, float alpha) {
     if (!dev) return false;
-    DropdownState* st = findOrCreate(win, req.id);
+    // 唯一 id 兜底（系统级）：同一窗口同一帧重复声明同一 id 时，后声明者会
+    // 复用同一状态并覆盖前者的 btnRect/selected → 点第一个下拉完全没反应
+    // （扩展代码复制粘贴时的典型错误）。这里按声明顺序自动派生 name#2、
+    // name#3…，扩展代码无需手写唯一名也能正确工作。
+    char idBuf[96];
+    const char* useId = req.id ? req.id : "";
+    for (int dup = 2; dup <= 64; dup++) {
+        DropdownState* probe = nullptr;
+        for (auto& d : items_)
+            if (d.winId == win.id && d.id == useId) { probe = &d; break; }
+        if (!probe || probe->frameStamp != frame_) break;   // 本帧未被占用 → 可用
+        std::snprintf(idBuf, sizeof(idBuf), "%s#%d", req.id ? req.id : "", dup);
+        useId = idBuf;
+    }
+    DropdownState* st = findOrCreate(win, useId);
     st->frameStamp = frame_;
     st->active = true;
     st->btnRect = req.btnRect;
@@ -85,6 +101,19 @@ bool DropdownSystem::draw(RenderDevice* dev, WindowInstance& win,
     st->dirty = req.dirty;
     st->itemH = req.itemH > 0 ? req.itemH : (20.0f * g_uiCtx.scale);
     st->font = req.font;
+    // 防御：fontSize 约定为逻辑像素（0 = 自动）。超出可读区间说明调用方
+    // 误传了屏幕坐标/窗口坐标，一律回落自动字号并告警一次。
+    float fs = req.fontSize;
+    if (fs != 0.0f && (fs < 6.0f || fs > 72.0f)) {
+        static bool warned = false;
+        if (!warned) {
+            UI_LOG_WARN("dropdown '%s': fontSize=%.1f out of 6..72, fallback to auto",
+                        req.id ? req.id : "", fs);
+            warned = true;
+        }
+        fs = 0.0f;
+    }
+    st->fontSize = fs;
     st->upBound = req.upBound;
     st->downBound = req.downBound;
     // 系统规划：滚动容器可无限上下，按钮为固定屏幕坐标；一旦按钮滚出可视区
@@ -123,11 +152,13 @@ bool DropdownSystem::draw(RenderDevice* dev, WindowInstance& win,
             Color(c.accent.r, c.accent.g, c.accent.b, 180.0f / 255.0f * alpha) :
             Color(c.inputBorder.r, c.inputBorder.g, c.inputBorder.b, 180.0f / 255.0f * alpha);
         drawRoundedBorder(dev, req.btnRect, bc, kBtnBorderW * s, kRadius * s);
-        // 当前选中项文字
-        wctl::drawTextLeftAt(dev, font, vname,
-                             Vec2(req.btnRect.pos.x + kTextPadX * s, req.btnRect.pos.y + kTextPadY * s),
-                             req.btnRect.size.y - 4.0f * s,
-                             Color(c.text.r, c.text.g, c.text.b, 220.0f / 255.0f * alpha));
+        // 当前选中项文字（字号单源：控件高 × 0.46，随控件/缩放跟随）
+        wctl::drawTextScaled(dev, font, vname,
+                             Rect(Vec2(req.btnRect.pos.x + kTextPadX * s, req.btnRect.pos.y),
+                                  Vec2(req.btnRect.size.x - (kTextPadX + kArrowOffX) * s,
+                                       req.btnRect.size.y)),
+                             Color(c.text.r, c.text.g, c.text.b, 220.0f / 255.0f * alpha),
+                             st->fontSize > 0.0f ? st->fontSize : wctl::textPxForCtrl(req.btnRect.size.y), 0);
         // 下拉箭头（矢量小三角，SDF 软边）
         float ax = req.btnRect.pos.x + req.btnRect.size.x - kArrowOffX * s;
         float ay = req.btnRect.pos.y + req.btnRect.size.y * 0.5f;
@@ -183,11 +214,12 @@ void DropdownSystem::renderPopups(RenderDevice* dev, WindowInstance& win, float 
                                 Color(c.accent.r, c.accent.g, c.accent.b, 60.0f / 255.0f * alpha),
                                 3.0f * s);
             bool sel = (item == st.selected);
-            wctl::drawTextLeftAt(dev, font, st.items[item],
-                                 Vec2(ir.pos.x + kItemPadX * s, ir.pos.y + kTextPadY * s),
-                                 ir.size.y - 4.0f * s,
+            wctl::drawTextScaled(dev, font, st.items[item],
+                                 Rect(Vec2(ir.pos.x + kItemPadX * s, ir.pos.y),
+                                      Vec2(ir.size.x - kItemPadX * s, ir.size.y)),
                                  sel ? Color(c.accent.r, c.accent.g, c.accent.b, alpha)
-                                     : Color(c.text.r, c.text.g, c.text.b, 200.0f / 255.0f * alpha));
+                                     : Color(c.text.r, c.text.g, c.text.b, 200.0f / 255.0f * alpha),
+                                 st.fontSize > 0.0f ? st.fontSize : wctl::textPxForCtrl(ir.size.y), 0);
         }
         dev->popScissorRect();
         // 迷你滚动条（内容超出列表高度时显示：轨道 + accent 拇指指示位置）

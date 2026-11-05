@@ -628,6 +628,15 @@ void drawSliderValueBar(RenderDevice* dev, const Rect& groove, float t,
 // 由 DropdownSystem::draw 在 g_uiCtx.dropdownStyle>=1 时统一分发到此。
 // 主题色单源、零裸色；每 case 自绘「底 + 边框 + 预览文字 + 右侧向下三角」。
 // 1=圆角胶囊 2=空心描边。
+
+// 控件文字字号单源实现（规则见头文件注释）
+float textPxForCtrl(float ctrlScreenH) {
+    float s = g_uiCtx.scale;
+    float designH = (s > 0.0f) ? ctrlScreenH / s : ctrlScreenH;
+    float px = designH * 0.46f;
+    return px < 11.0f ? 11.0f : px;
+}
+
 void drawComboBtnStyled(RenderDevice* dev, const Rect& r, const char* previewText,
                         bool hover, bool open, float alpha, Font* font, int style) {
     if (!dev || r.size.x <= 0.0f || r.size.y <= 0.0f) return;
@@ -680,9 +689,11 @@ void drawComboBtnStyled(RenderDevice* dev, const Rect& r, const char* previewTex
         break;
     }
 
-    // 预览文字（左内边 8×scale，垂直居中）
-    if (previewText && previewText[0])
-        drawTextLeftAt(dev, f, previewText, Vec2(r.pos.x + 8.0f * s, r.pos.y), r.size.y, tx);
+    // 预览文字（字号单源：控件高 × 0.46；左内边 8×scale，垂直居中）
+    if (previewText && previewText[0]) {
+        Rect textR(r.pos.x + 8.0f * s, r.pos.y, r.size.x - arrowW - 8.0f * s, h);
+        drawTextScaled(dev, f, previewText, textR, tx, textPxForCtrl(h), 0);
+    }
 }
 
 void drawCheck(RenderDevice* dev, const Rect& r, bool checked,

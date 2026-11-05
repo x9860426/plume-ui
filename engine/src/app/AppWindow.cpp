@@ -3,6 +3,7 @@
 #include "../ui/Theme.h"
 #include "../ui/Element.h"
 #include "../ui/page/PageControls.h"
+#include "../ui/win/ImageSystem.h"
 #include "../render/gl/GLDevice.h"
 #include "../render/vk/VKDevice.h"
 #include "../render/ThreadScheduler.h"
@@ -24,12 +25,8 @@ namespace ui {
 std::vector<std::unique_ptr<AppWindow>> AppManager::apps_;
 AppWindow* AppManager::current_ = nullptr;
 
-// 快捷键码（GLFW：290=F1 291=F2 292=F3 293=F4 300=F11；
-// 历史语义：291=切后端 292=主题切换(MainUI 内) 293=新应用窗口）
-// 位掩码位定义见 UiContext.h（UiContext::HOTKEY_*，MainUI/AppWindow 共用）
-static constexpr int kKeyBackendSwitch = 291;
-static constexpr int kKeyNewApp        = 293;
-static constexpr int kKeyFullscreen    = 300;
+// 键码常量已废除：热键收编进键路由系统（KeyRouter），键码随统一注册表
+// 每行声明（作用域也写在行里），不再有集中键码表或页面散写。
 
 // 全局渲染分辨率表（index 对应 ctx.renderRes；0=跟随窗口不查表）
 static const int kResW[7] = { 0, 640, 854, 1280, 1920, 2560, 3840 };
@@ -462,6 +459,10 @@ void AppWindow::logicSize(int& lw, int& lh) const {
 }
 
 void AppWindow::initDevice() {
+    // 设备重建（切后端 / 改渲染分辨率重启 / 新应用窗口）：旧设备上的纹理
+    // 句柄全部失效，图片缓存必须清空 —— 否则拿旧 tex id 画在新设备上，
+    // 正是「图片变方块/乱码」的根因（缓存键同样含设备维度，双保险）。
+    g_images.releaseAll();
     if (backend_ == Backend::Vulkan) {
         auto vk = std::make_unique<VKDevice>();
         if (vk->init(window_->nativeHandle(), window_->width(), window_->height())) {
@@ -588,6 +589,9 @@ AppWindow* AppWindow::createApp(int w, int h, const char* title, Backend backend
 
     app->initFonts();
 
+    // 统一键注册表建表一次（作用域三档，见 buildKeyBindings）
+    app->buildKeyBindings();
+
     // 自绘标题栏占位高：必须在内容 init 之前写入——MainUI 布局按
     // ctx.appTitleBarH 整体下移让位（系统边框模式下为 0，行为不变）
     app->ctx.appTitleBarH = app->appBarH();
@@ -607,6 +611,85 @@ AppWindow* AppWindow::createApp(int w, int h, const char* title, Backend backend
                 app->backend_ == Backend::Vulkan ? "Vulkan" : "OpenGL",
                 app->window_->width(), app->window_->height(), lw, lh);
     return app.release();   // AppManager::createApp 接管（push_back）
+}
+
+// 统一键注册表（唯一键表）：每行 = 一个键 + 作用域 + 动作。
+// 作用域三档都是同一字段，白名单长度决定 1 底 / N 底：
+//   A 全局      KSCOPE_ALL                            → 所有内容页
+//   B 指定 1 底 KSCOPE_ONLY, {"main"}                 → 只 main
+//   C 限制 N 底 KSCOPE_ONLY, {"main","test",...}      → 只列出的底
+// 换作用域 = 改这一行数据，不改判定代码、不往各内容页抄表。
+void AppWindow::buildKeyBindings() {
+    keyBindings_ = {
+        // ---- A 全局：4 条窗口级系统动作（登记即写明跨页理由）----
+        // ① F2 切渲染后端：目标可达性判定（系统层单源 appVulkanAvailable）——
+        // 本机仅 OpenGL 可用（未编译 Vulkan）时 F2 无对手可切，若强行切会
+        // 建出 Vulkan 窗口（无 GL 上下文），initDevice 回退 GL 时 gladLoadGL
+        // 失败 → 设备为空 → 崩溃。故不可达即不消费。
+        { 291, KMOD_NONE, [this] {
+              if (appVulkanAvailable()) {
+                  backendSwitch_ = true;   // 全局动作：宿主全部应用快照重启
+                  return true;
+              }
+              UI_LOG_WARN("F2 backend switch ignored: Vulkan backend not built (no SDK)");
+              return false;
+          }, KSCOPE_ALL, {},
+          "F2 切渲染后端：窗口级能力，不依附任何内容页" },
+        // ② F11 全屏切换（Resize 事件驱动后续适配）
+        { 300, KMOD_NONE, [this] {
+              window_->toggleFullscreen();
+              return true;
+          }, KSCOPE_ALL, {},
+          "F11 全屏：窗口级能力，任何内容页都应可切" },
+        // ③ F4 新应用窗口（帧末创建，遍历安全）
+        { 293, KMOD_NONE, [this] {
+              requestNewApp();
+              return true;
+          }, KSCOPE_ALL, {},
+          "F4 新应用窗口：宿主级能力，与内容页无关" },
+        // ④ Esc 关闭栈顶悬浮窗（文本编辑中的 Esc 已被 KeyRouter 第 0 层
+        // 拦截，优先归输入框「放弃编辑」）
+        { 256, KMOD_NONE, [this] {
+              if (WindowInstance* top = layerStack.topWindow())
+                  layerStack.closeWindow(top->id);
+              return true;
+          }, KSCOPE_ALL, {},
+          "Esc 关栈顶：悬浮窗栈是全局层，任何底开的窗都应能关" },
+
+        // ---- B 指定 1 底：F3 主题循环，仅 main 底 ----
+        // cycleTheme 单源，禁止各自写 (i+1)%COUNT。
+        { 292, KMOD_NONE, [] {
+              cycleTheme(1);
+              return true;
+          }, KSCOPE_ONLY, {"main"} },
+
+        // ---- C 限制 N 底：F1 重置视觉参数 ----
+        // 白名单写 3 个就是「限制 3 底」，与 B 档同一机制；本工程当前只
+        // 注册 main / test 两个内容页，故这里列 2 个。新增内容页后把名字
+        // 加进白名单即可，无需改判定代码。
+        { 290, KMOD_NONE, [this] {
+              ctx.thicknessUser = 1.0f;
+              ctx.radiusScaleUser = 1.0f;
+              ctx.shadowStrength = 1.0f;
+              ctx.sdfAA = true;
+              ctx.baseAA = true;
+              ctx.floatWinAA = true;
+              ctx.checkboxShowTick = true;
+              ctx.switchStyle = 0;
+              ctx.switchExtra = 0;
+              ctx.sliderStyle = 0;
+              ctx.ballStyle = 0;
+              ctx.btnStyle = 0;
+              ctx.uiScaleUser = 1.0f;
+              ctx.circGrad = true;
+              if (ctx.renderRes != 0) {
+                  ctx.renderRes = 0;
+                  ctx.renderResDirty = true;
+              }
+              return true;
+          }, KSCOPE_ONLY, {"main", "test"} },
+    };
+    KeyRouter::audit(&keyBindings_);
 }
 
 void AppWindow::applySnapshot(AppSnapshot&& s) {
@@ -727,26 +810,9 @@ void AppWindow::frame() {
         resRestart_ = true;
         return;
     }
-    // 快捷键位掩码单源（UiContext.hotkeyMask）：清位 = 该键失效（嵌入场景用）
-    if (input_.keyPressed(kKeyBackendSwitch) && (ctx.hotkeyMask & UiContext::HOTKEY_F2_BACKEND)) {
-        // 目标后端可达性判定（系统层单源 appVulkanAvailable）：
-        // 本机仅 OpenGL 可用（未编译 Vulkan）时 F2 无对手可切——若强行切会
-        // 建出 Vulkan 窗口（无 GL 上下文），initDevice 回退 GL 时 gladLoadGL
-        // 失败 → 设备为空 → 崩溃。故目标不可达即忽略本次 F2。
-        if (appVulkanAvailable()) {
-            backendSwitch_ = true;    // 全局动作：宿主全部应用快照重启
-        } else {
-            UI_LOG_WARN("F2 backend switch ignored: Vulkan backend not built (no SDK)");
-        }
-        return;
-    }
-    if (input_.keyPressed(kKeyFullscreen) && (ctx.hotkeyMask & UiContext::HOTKEY_F11_FULLSCREEN)) {
-        window_->toggleFullscreen();  // F11 全屏（Resize 事件驱动后续适配）
-    }
-    if (input_.keyPressed(kKeyNewApp) && (ctx.hotkeyMask & UiContext::HOTKEY_F4_NEW_APP)) {
-        // F4 新应用窗口（帧末创建，遍历安全）：默认请求 = 独立 main 窗口
-        requestNewApp();
-    }
+    // 热键已收编进键路由系统（KeyRouter）：一张统一注册表，每行带作用域。
+    // A 全局 F2/F11/F4/Esc / B 仅 main 底 F3 切主题 / C 限 main+test 两底
+    // F1 重置。此处不再有任何散写 keyPressed 判定，见 KeyRouter.h。
 
     // 边框模式切换（其他页开关置 dirty）：GLFW_DECORATED 只在建窗瞬间生效，
     // 运行期改不了样式 → 通知宿主快照重启全部应用（与 F2 同一条迁移链路，
@@ -783,6 +849,14 @@ void AppWindow::frame() {
             window_->setRoundCorner(rpx);
         }
     }
+    // ---- 3.5 键路由（热键收编的唯一判定点，见 KeyRouter.h）----
+    // 声明：统一注册表每行带作用域（全局 / 指定 1 底 / 限制 N 底），
+    //       当前内容页名传给系统，由系统比对白名单——换页自动换作用域。
+    // 系统：文本输入有焦点 → 整条链让位；注册表按序匹配 → 未命中即丢弃。
+    keys.setBindings(&keyBindings_);
+    keys.route(input_, winMgr.textInput().hasFocus(),
+               content_ && content_->name ? content_->name : "");
+
     if (content_->update) content_->update(this, input_);
 
     // ---- 4. 渲染（多线程：录制帧包交渲染线程回放；单线程：直通） ----

@@ -26,7 +26,15 @@
 
 namespace ui {
 
+// 字号单源见 wctl::textPxForCtrl（控件高屏幕像素 → 逻辑像素字号，0.46 系数）。
+// 下拉按钮、列表项、样式化下拉预览三处共用，禁止再写第二份换算。
+
 // 下拉申请请求（btnRect 为屏幕绝对坐标，与 RegionSystem 一致）
+//
+// 【聚合初始化契约】调用方普遍用 { ... } 按位置赋值，因此：
+//   **新增字段只能追加到结构体末尾**，禁止在中间插入。
+//   反例：曾把 fontSize 插在 font 与 upBound 之间，导致所有 11 参数调用整体
+//   错位（upBound 的窗口坐标被当成字号）→ 下拉文字巨大且随窗口移动变化。
 struct DropdownRequest {
     Rect btnRect;                          // 按钮矩形（屏幕绝对）
     const char* const* items = nullptr;    // 选项文本数组（render 至下次 click 间有效）
@@ -38,6 +46,8 @@ struct DropdownRequest {
     float itemH = 0;                       // 列表项高（0 = 默认 20×scale）
     Font* font = nullptr;                  // 文字字体（nullptr = g_uiCtx.smallFont）
     float upBound = 0, downBound = 0;      // 弹出约束区屏幕 y（0 = 不约束，列表可任意弹）
+    // ---- 以下为追加字段（不得插到上面任何字段之前）----
+    float fontSize = 0;                    // 文字字号（逻辑像素；0 = 按控件高自动换算）
 };
 
 // handlePress 返回（常用只看 consumed）
@@ -62,6 +72,7 @@ struct DropdownState {
     float itemH = 20.0f;
     Font* font = nullptr;
     float upBound = 0, downBound = 0;   // 弹出约束区屏幕 y（0 = 不约束）；弹出层裁剪到区内
+    float fontSize = 0;                 // 文字字号（逻辑像素；0 = 自动按控件高换算）
     // 跨帧交互态
     bool open = false;
     bool hoverBtn = false;

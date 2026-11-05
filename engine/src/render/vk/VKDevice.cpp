@@ -958,15 +958,22 @@ void VKDevice::presentImpl(const std::vector<Vertex>& verts,
         destroySwapchainDeps();
         recreate();
     }
+    // 帧同步顺序（必须）：先等上一帧提交完成，再 acquire 下一张图。
+    // 反例：先 acquire 再 wait fence → imageAvailable_ 可能仍有未完成的
+    // wait 操作，触发 VUID-vkAcquireNextImageKHR-semaphore-01779（校验层
+    // 报「Semaphore must not have any pending operations」）。
+    vkWaitForFences(device_, 1, &fence_, VK_TRUE, UINT64_MAX);
+
     uint32_t idx = 0;
     VkResult r = vkAcquireNextImageKHR(device_, swapchain_, UINT64_MAX,
         imageAvailable_, VK_NULL_HANDLE, &idx);
     if (r == VK_ERROR_OUT_OF_DATE_KHR || r == VK_SUBOPTIMAL_KHR) {
+        // fence 保持「已信号」：本帧没有 submit，也没有 Reset，下一帧 wait
+        // 立即返回，不会死等；swapchain 重建后继续。
         resize(extent_.width, extent_.height); return;
     }
     if (r != VK_SUCCESS) return;
 
-    vkWaitForFences(device_, 1, &fence_, VK_TRUE, UINT64_MAX);
     vkResetFences(device_, 1, &fence_);
 
     // 渲染目标尺寸变更消费（setTargetSize 跨线程置位；此处 GPU 空闲——

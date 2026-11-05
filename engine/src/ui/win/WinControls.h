@@ -17,6 +17,13 @@ namespace wctl {
 void drawTextScaled(RenderDevice* dev, Font* f, const char* utf8, const Rect& r,
                     const Color& c, float px, int align = 0);
 
+// ====== 控件文字字号单源（屏幕像素控件高 → 逻辑像素字号） ======
+// 规则：控件/行高的屏幕像素 ÷ scale 还原设计高，再 × 0.46（留上下内边），
+// 下限 11 保证可读。下拉按钮、下拉列表项、样式化下拉预览统一走此函数。
+// 返回逻辑像素；drawTextScaled 内部会再乘 scale，调用方禁止再乘。
+float textPxForCtrl(float ctrlScreenH);
+
+
 // ====== 主题色按钮（垂直渐变底 + hover 变体 + 边框 + 居中文字） ======
 // 对齐参考 FillGradientRoundedRect(btnBg1→btnBg2 / hover btnHover1→btnHover2)。
 // px > 0 按逻辑像素字号渲染（参考 12/13px）；px = 0 用字体默认尺寸（兼容旧调用）。

@@ -418,4 +418,15 @@ bool ImportThemeFromFile(int index, const std::string& filePath) {
     }
 }
 
+// 主题循环切换单源（见 Theme.h）。
+// delta 可正可负：先按 THEME_COUNT 取模再补一次，保证负偏移也落在
+// [0, THEME_COUNT) —— 直接 `(i + delta) % COUNT` 在 C++ 里对负数得负值，
+// 会把 g_currentTheme 写成负数、之后 g_themes[-1] 越界读。
+const char* cycleTheme(int delta) {
+    int next = (g_currentTheme + delta) % THEME_COUNT;
+    if (next < 0) next += THEME_COUNT;
+    g_currentTheme = next;
+    return g_themes[g_currentTheme].name.c_str();
+}
+
 } // namespace ui

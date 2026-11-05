@@ -30,7 +30,9 @@ struct FloatBallState {
 struct WindowInstance {
     int id = 0;                          // 实例ID（自动分配，跨帧交互的唯一凭证）
     int configIndex = -1;                // 配置表索引
-    float x = 0, y = 0, w = 0, h = 0;    // 当前位置尺寸（像素）
+    // 当前位置尺寸：屏幕像素（不是配置表的逻辑像素）。布局一律
+    // win.x + 逻辑值 * g_uiCtx.scale，禁止直接把 win.w 当逻辑宽。
+    float x = 0, y = 0, w = 0, h = 0;
     float alpha = 0.0f;                  // 当前透明度（淡入淡出动画）
     float targetAlpha = 1.0f;
     bool fadingOut = false;              // 淡出中

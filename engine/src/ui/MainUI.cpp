@@ -47,6 +47,8 @@ MainUI::MainUI() {
     vwin_.id = kPageVirtualWinId;
     vwin_.tabSel = 0;
     vwin_.visible = true;
+    // 热键不再由页面持有：统一注册表见 AppWindow::buildKeyBindings
+    // （每行带作用域：全局 / 指定 1 底 / 限制 N 底）。
 }
 
 MainUI::~MainUI() = default;   // unique_ptr<PageHandlerRegistry> 析构（完整类型在此）
@@ -106,10 +108,8 @@ void MainUI::resize(int w, int h) {
 // ============================================================
 
 void MainUI::computeLayout(int w, int h) {
-    // 基础缩放（逻辑高/600，下限 0.5）× 用户全局页面缩放倍率
-    float base = (float)h / 600.0f;
-    if (base < 0.5f) base = 0.5f;
-    scale_ = base * g_uiCtx.uiScaleUser;
+    // 页面缩放单源：UiContext::pageScale（逻辑高/600 × 用户页面缩放）
+    scale_ = g_uiCtx.pageScale(h);
 
     // 自绘应用标题栏占位（系统边框模式 = 0）：框架 chrome 整体下移让位；
     // "内容从哪里开始"只有 ctx.appTitleBarH 一个源
@@ -320,36 +320,10 @@ void MainUI::update(Input& in) {
     // 9. 字符流：不经 MainUI —— TextInputSystem 在 g_winMgr.handleInput
     //    帧首统一消费（页面/悬浮窗输入框同通路，见 WindowManager::handleInput）
 
-    // 10. F1：重置全部视觉增强参数（g_uiCtx 单源，全引擎即时生效；位掩码可关；
-    //     文本编辑中豁免，防打断输入）
-    if (in.keyPressed(290) && (g_uiCtx.hotkeyMask & UiContext::HOTKEY_F1_RESET) &&
-        !g_winMgr.textInput().hasFocus()) {
-
-        g_uiCtx.thicknessUser = 1.0f;
-        g_uiCtx.radiusScaleUser = 1.0f;
-        g_uiCtx.shadowStrength = 1.0f;
-        g_uiCtx.sdfAA = true;
-        g_uiCtx.baseAA = true;
-        g_uiCtx.floatWinAA = true;
-        g_uiCtx.checkboxShowTick = true;
-        g_uiCtx.switchStyle = 0;
-        g_uiCtx.switchExtra = 0;
-        g_uiCtx.sliderStyle = 0;
-        g_uiCtx.ballStyle = 0;
-        g_uiCtx.btnStyle = 0;
-        g_uiCtx.uiScaleUser = 1.0f;
-        g_uiCtx.circGrad = true;
-        if (g_uiCtx.renderRes != 0) {
-            g_uiCtx.renderRes = 0;
-            g_uiCtx.renderResDirty = true;
-        }
-    }
-    // F2/F3：主题循环切换（位掩码单源；文本编辑中豁免防打断输入）
-    if (in.keyPressed(292) && (g_uiCtx.hotkeyMask & UiContext::HOTKEY_F3_THEME) &&
-        !g_winMgr.textInput().hasFocus()) {
-        g_currentTheme = (g_currentTheme + 1) % THEME_COUNT;
-    }
-    // Esc 关闭栈顶：由 WindowManager::onKeys 统一处理（开窗改走「其他」页按钮墙）
+    // 10. 热键已收编进键路由系统（KeyRouter）：F1 重置 / F3 切主题改为
+    //     构造函数里的键表声明（本类 keyTable()），由 AppWindow 帧统一路由。
+    //     页面里不再出现散写的 keyPressed 判定——收编判定见《热键系统规范》。
+    // Esc 关闭栈顶：改由应用级键表承接（AppWindow::buildAppKeys，跨页系统动作）
 }
 
 // ============================================================

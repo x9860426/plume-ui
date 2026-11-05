@@ -338,15 +338,11 @@ void WindowManager::onKeys(Input& in) {
     // 文本编辑中：Esc 优先给输入框（放弃编辑恢复原值，不关窗）；
     // 方向键/Home/End/Delete 走 caretKeys 状态机（单击 1 格/双击跳首尾/
     // 长按 0.8s 连发，GLFW 键码非可打印无 Char 流；真实时间驱动）
+    // 其余键盘热键已收编进键路由系统（KeyRouter）：Esc 关栈顶改由
+    // 应用级键表承接（AppWindow::buildAppKeys），此处不再判定任何热键。
     if (textInput_.hasFocus()) {
         if (in.keyPressed(256 /*GLFW_KEY_ESCAPE*/)) textInput_.cancelFocus();
         textInput_.caretKeys(in);
-        return;
-    }
-
-    if (in.keyPressed(256 /*GLFW_KEY_ESCAPE*/)) {
-        if (WindowInstance* top = g_layerStack.topWindow())
-            g_layerStack.closeWindow(top->id);
     }
 }
 

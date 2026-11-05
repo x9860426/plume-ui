@@ -21,10 +21,13 @@
 
 namespace ui {
 
-// 区域申请请求（窗口内容区内的相对坐标，逻辑像素，系统乘 scale）
+// 区域申请请求（屏幕绝对坐标，与 win.x/y 同单位）
+// 注意：旧注释写「逻辑像素，系统乘 scale」，但实现（RegionSystem.cpp begin）
+// 直接把 win.x/y + req.x/y 当屏幕坐标用、不做 scale 换算 —— 以实现为准。
+// 传逻辑像素会在缩放 ≠1 时整体偏移，正确写法：win.x + 100.0f * scale。
 struct RegionRequest {
-    float x = 0, y = 0;     // 相对窗口左上角
-    float w = 0, h = 0;     // 申请的区域大小
+    float x = 0, y = 0;     // 相对窗口左上角的屏幕像素偏移
+    float w = 0, h = 0;     // 申请的区域大小（屏幕像素）
     int tabId = 0;          // 所属标签（非当前标签时区域不激活）
     const char* id = "";    // 区域逻辑名（窗口内唯一，滚动状态按此续期复用）
 };
